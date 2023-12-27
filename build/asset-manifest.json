@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/aydasholani/static/css/main.066c4ed3.css",
+    "main.js": "/aydasholani/static/js/main.5f226fcd.js",
+    "static/js/787.3503cf78.chunk.js": "/aydasholani/static/js/787.3503cf78.chunk.js",
+    "index.html": "/aydasholani/index.html",
+    "main.066c4ed3.css.map": "/aydasholani/static/css/main.066c4ed3.css.map",
+    "main.5f226fcd.js.map": "/aydasholani/static/js/main.5f226fcd.js.map",
+    "787.3503cf78.chunk.js.map": "/aydasholani/static/js/787.3503cf78.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.066c4ed3.css",
+    "static/js/main.5f226fcd.js"
+  ]
+}
