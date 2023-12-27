@@ -1,15 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import DarkLogo from '../sholani-favicon-black.png'
+import LightLogo from '../sholani-favicon-white.png'
 
 export default function Navbar() {
   return (
     <nav>
-      <Link to='/'>
-        <img src={DarkLogo} alt='logo' width={60} />
-      </Link> 
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
+      <div className="logo-container">
+        <Link to='/'>
+          <img src={LightLogo} alt='logo' width={60} className='logo-link'/>
+        </Link> 
+      </div>
+      <div className="nav-links">
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+      </div>
     </nav>
   )
 }

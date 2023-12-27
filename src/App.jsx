@@ -4,6 +4,7 @@ import About from "./routes/About";
 import Home from "./routes/Home";
 import Navbar from './components/Navbar';
 import { Container } from 'react-bootstrap';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/about' element={<About />} />
       </Routes>
     </Container>
+    <Footer />
 
     </>
    
