@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import DarkLogo from '../sholani-favicon-black.png'
 import LightLogo from '../sholani-favicon-white.png'
+
 
 export default function Navbar() {
   return (
