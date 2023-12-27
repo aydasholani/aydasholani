@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import DarkLogo from '../sholani-favicon-black.png'
-import { Image } from 'react-bootstrap'
 
 export default function Navbar() {
   return (
