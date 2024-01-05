@@ -54,7 +54,11 @@ footer {
   color: $background-color;
   text-align: center;
 }
-
+main {
+  padding: 1rem 0;
+  border: 1px solid black;
+  background-color:azure;
+}
 
 h1,
 h2,

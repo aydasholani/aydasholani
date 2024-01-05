@@ -42,7 +42,7 @@ export default function Login() {
   };
 
   return (
-    <div>
+    <>
       <p>
         {role}
       </p>
@@ -76,6 +76,6 @@ export default function Login() {
       </form>
 
       <p>Don't have an account? <Link to="/register">Register here!</Link></p>
-    </div>
+    </>
   );
 };

@@ -10,18 +10,16 @@ import Register from './routes/Register';
 import Login from './routes/Login';
 import Dashboard from './routes/Dashboard';
 import Admin from './routes/Admin';
-// import TestPage from './routes/TestPage';
+import TestPage from './routes/TestPage';
 
 // Components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-// import { ThemeContext, AuthContext } from './contexts/Contexts';
+import Layout from './components/Layout';
+
 
 
 function App() {
-  // const [theme, setTheme] = useState('dark');
-  // const [currentUser, setCurrentUser] = useState({ name: 'Taylor' });
-
   return (
     <>
     <header>
@@ -30,20 +28,16 @@ function App() {
 
     <Container className='main'>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/login' element={<Login />} />
-        {/* <Route path="/test" element={
-          <ThemeContext.Provider value={theme}>
-            <AuthContext.Provider value={currentUser}>
-              <TestPage props={currentUser}/>
-            </AuthContext.Provider>
-          </ThemeContext.Provider>
-          } 
-        /> */}
-        <Route path='/dashboard' element={<Dashboard />} />
-        <Route path='/admin' element={<Admin />} />
+        <Route element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="home" element={<Home />} />
+          <Route path='about' element={<About />} />
+          <Route path='register' element={<Register />} />
+          <Route path='login' element={<Login />} />
+          <Route path='dashboard' element={<Dashboard />} />
+          <Route path='admin' element={<Admin />} />
+          <Route path='test' element={<TestPage />} />
+        </Route>
       </Routes>
     </Container>
     <Footer />

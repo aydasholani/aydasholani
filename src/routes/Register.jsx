@@ -31,7 +31,7 @@ export default function Register() {
   };
 
   return (
-    <section>
+    <>
       <h2>Registration Form</h2>
       <form>
         <label htmlFor="firstName">First Name:</label>
@@ -95,6 +95,6 @@ export default function Register() {
       </form>
       
       <p>Already have an account? <Link to="/login">Login here!</Link></p>
-    </section>
+    </>
   );
 }

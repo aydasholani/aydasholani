@@ -18,7 +18,7 @@ export default function Navbar() {
         <Link to="/login">Login</Link>
         <Link to="/dashboard">Dashboard</Link>
         <Link to="/admin">Admin</Link>
-        <Link to="/test">Test</Link>
+        <Link to="/test">Test page</Link>
       </div>
     </nav>
   )

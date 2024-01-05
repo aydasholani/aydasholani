@@ -3,8 +3,8 @@ const apiKey = process.env.REACT_APP_API_KEY;
 
 export default function About() {
   return (
-    <div>
+    <>
       <h1>About page 1.0, Secret: {apiKey}</h1>
-    </div>
+    </>
   )
 }
