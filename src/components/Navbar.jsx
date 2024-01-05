@@ -14,6 +14,11 @@ export default function Navbar() {
       <div className="nav-links">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
+        <Link to="/register">Register</Link>
+        <Link to="/login">Login</Link>
+        <Link to="/dashboard">Dashboard</Link>
+        <Link to="/admin">Admin</Link>
+        <Link to="/test">Test</Link>
       </div>
     </nav>
   )

@@ -1,21 +1,55 @@
 import './App.scss';
+import { useState, useEffect } from 'react';
 import { Routes, Route} from "react-router-dom";
-import About from "./routes/About";
-import Home from "./routes/Home";
-import Navbar from './components/Navbar';
 import { Container } from 'react-bootstrap';
+
+// Routes
+import Home from "./routes/Home";
+import About from "./routes/About";
+import Register from './routes/Register';
+import Login from './routes/Login';
+import Dashboard from './routes/Dashboard';
+import Admin from './routes/Admin';
+import TestPage from './routes/TestPage';
+
+// Components
+import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import { ThemeContext, AuthContext } from './contexts/Contexts';
+
 
 function App() {
+  const [theme, setTheme] = useState('dark');
+  const [currentUser, setCurrentUser] = useState({ name: 'Taylor' });
+  const token = localStorage.getItem('cookies')
+  console.log(token)
+  const getHeader = () => {
+    
+  }
+
   return (
     <>
     <header>
       <Navbar />
+
     </header>
-    <Container>
+
+    <Container className='main'>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path='/about' element={<About />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/login' element={<Login />} />
+        <Route path="/test" element={
+          <ThemeContext.Provider value={theme}>
+            <AuthContext.Provider value={currentUser}>
+              <TestPage props={currentUser}/>
+            </AuthContext.Provider>
+          </ThemeContext.Provider>
+          } 
+        />
+        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/admin' element={<Admin />} />
       </Routes>
     </Container>
     <Footer />
