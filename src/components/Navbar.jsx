@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import LightLogo from '../sholani-favicon-white.png'
 
 
@@ -7,18 +7,18 @@ export default function Navbar() {
   return (
     <nav>
       <div className="logo-container">
-        <Link to='/'>
-          <img src={LightLogo} alt='logo' width={60} className='logo-link'/>
-        </Link> 
+        <NavLink to='/'>
+          <img src={LightLogo} alt='logo' width={60} className='logo-NavLink'/>
+        </NavLink> 
       </div>
       <div className="nav-links">
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/register">Register</Link>
-        <Link to="/login">Login</Link>
-        <Link to="/dashboard">Dashboard</Link>
-        <Link to="/admin">Admin</Link>
-        <Link to="/test">Test page</Link>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/register">Register</NavLink>
+        <NavLink to="/login">Login</NavLink>
+        <NavLink to="/dashboard">Dashboard</NavLink>
+        <NavLink to="/admin">Admin</NavLink>
+        <NavLink to="/test">Test page</NavLink>
       </div>
     </nav>
   )

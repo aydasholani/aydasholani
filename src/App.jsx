@@ -11,6 +11,7 @@ import Login from './routes/Login';
 import Dashboard from './routes/Dashboard';
 import Admin from './routes/Admin';
 import TestPage from './routes/TestPage';
+import Error404 from './routes/Error404';
 
 // Components
 import Navbar from './components/Navbar';
@@ -37,6 +38,7 @@ function App() {
           <Route path='dashboard' element={<Dashboard />} />
           <Route path='admin' element={<Admin />} />
           <Route path='test' element={<TestPage />} />
+          <Route path='*' element={<Error404 />} />
         </Route>
       </Routes>
     </Container>
