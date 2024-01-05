@@ -1,10 +1,10 @@
-import React from 'react'
+// import React from 'react'
 
-export default function TestPage({props}) {
-  return (
-    <div>
-      TestPage
-    <p>{props.name}</p>
-    </div>
-  )
-}
+// export default function TestPage({props}) {
+//   return (
+//     <div>
+//       TestPage
+//     <p>{props.name}</p>
+//     </div>
+//   )
+// }

@@ -1,5 +1,5 @@
 import './App.scss';
-import { useState, useEffect } from 'react';
+// import { useState } from 'react';
 import { Routes, Route} from "react-router-dom";
 import { Container } from 'react-bootstrap';
 
@@ -10,28 +10,22 @@ import Register from './routes/Register';
 import Login from './routes/Login';
 import Dashboard from './routes/Dashboard';
 import Admin from './routes/Admin';
-import TestPage from './routes/TestPage';
+// import TestPage from './routes/TestPage';
 
 // Components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import { ThemeContext, AuthContext } from './contexts/Contexts';
+// import { ThemeContext, AuthContext } from './contexts/Contexts';
 
 
 function App() {
-  const [theme, setTheme] = useState('dark');
-  const [currentUser, setCurrentUser] = useState({ name: 'Taylor' });
-  const token = localStorage.getItem('cookies')
-  console.log(token)
-  const getHeader = () => {
-    
-  }
+  // const [theme, setTheme] = useState('dark');
+  // const [currentUser, setCurrentUser] = useState({ name: 'Taylor' });
 
   return (
     <>
     <header>
       <Navbar />
-
     </header>
 
     <Container className='main'>
@@ -40,14 +34,14 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
-        <Route path="/test" element={
+        {/* <Route path="/test" element={
           <ThemeContext.Provider value={theme}>
             <AuthContext.Provider value={currentUser}>
               <TestPage props={currentUser}/>
             </AuthContext.Provider>
           </ThemeContext.Provider>
           } 
-        />
+        /> */}
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/admin' element={<Admin />} />
       </Routes>
