@@ -1,7 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import { REACT_APP_API_KEY } from "../configs";
 
 export default function Login() {
   const [formData, setFormData] = useState({
