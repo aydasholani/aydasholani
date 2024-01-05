@@ -1,6 +1,4 @@
 import { Link, Outlet } from "react-router-dom";
-import { Image } from "react-bootstrap";
-
 
 export default function Users({users}) {
 

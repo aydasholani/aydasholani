@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 
 export default function Login() {
@@ -8,7 +8,7 @@ export default function Login() {
     identifier: "",
     password: "",
   });
-  const navigate = useNavigate()
+
   const [role, setRole] = useState('')
 
   const handleChange = (e) => {
