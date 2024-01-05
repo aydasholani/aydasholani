@@ -2,13 +2,13 @@ import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
+
 export default function Login() {
   const [formData, setFormData] = useState({
     identifier: "",
     password: "",
   });
   const navigate = useNavigate()
-
   const [role, setRole] = useState('')
 
   const handleChange = (e) => {
@@ -16,31 +16,43 @@ export default function Login() {
   };
 
   const loginUser = async () => {
-    axios
-      .post("http://localhost:8080/v1/auth/login", formData)
-      .then((response) => {
-        console.log(response.data);
-        console.log(response.data.data)
-        setRole(response.data.data)
-
+    try {
+      const response = await axios.post("http://localhost:8080/v1/auth/login", formData, {
+        withCredentials: true,
+      });
+  
+      if (response.data.status === 'success') {
+        const authToken = response.data.data.token;
+  
+        // Store the token securely, for example, in an HTTP-only cookie
+        document.cookie = `SessionID=${authToken}; secure; HttpOnly; SameSite=None`;
+  
+        // Set the user role
+        setRole(response.data.data.role);
+  
         alert("Login successful!");
-        if (response.data.data === 'admin') {
-          navigate('/admin')
+  
+        if (response.data.data.role === 'admin') {
+          console.log('Admin');
+          // Redirect to the admin page or perform other admin-related actions
         } else {
-          navigate('/dashboard')
-        } 
-
+          console.log('User');
+          // Redirect to the user dashboard or perform other user-related actions
+        }
         
-
-        // Redirect to dashboard or handle success accordingly
-      })
-      .catch((error) => {
-        console.error(error.response.data);
+        // Additional logic if needed after successful login
+      } else {
+        console.error('Login failed:', response.data.message);
         alert("Login failed. Please check your credentials.");
         // Handle error or display error message to the user
-      });
+      }
+    } catch (error) {
+      console.error('Error during login:', error.response.data);
+      alert("Login failed. Please check your credentials.");
+      // Handle error or display error message to the user
+    }
   };
-
+  
   return (
     <>
       <p>
