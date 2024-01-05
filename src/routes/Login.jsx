@@ -17,9 +17,7 @@ export default function Login() {
 
   const loginUser = async () => {
     try {
-      const response = await axios.post("http://localhost:8080/v1/auth/login", formData, {
-        withCredentials: true,
-      });
+      const response = await axios.post("http://localhost:8080/v1/auth/login", formData);
   
       if (response.data.status === 'success') {
         const authToken = response.data.data.token;
