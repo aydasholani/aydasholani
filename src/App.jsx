@@ -1,4 +1,6 @@
 import './App.css';
+import Navbar from './components/Navbar';
+import RoutesContainer from './components/RoutesContainer';
 
 function App() {
   return (
@@ -6,9 +8,9 @@ function App() {
       <header>
         <h1>Ayda Sholani</h1>
       </header>
+      <Navbar />
       <main>
-        
-
+        <RoutesContainer />
       </main>
     </div>
   );
