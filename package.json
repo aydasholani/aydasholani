@@ -2,6 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://aydasholani.github.io/portfolio",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -38,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "babel-plugin-module-resolver": "^5.0.0",
     "gh-pages": "^6.1.1"
   }
 }
