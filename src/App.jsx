@@ -1,6 +1,7 @@
 import './App.css';
-import Navbar from './components/Navbar';
 import RoutesContainer from './components/RoutesContainer';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <main>
         <RoutesContainer />
       </main>
+      <Footer />
     </div>
   );
 }
