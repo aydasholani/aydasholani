@@ -2,13 +2,12 @@ import './App.scss';
 import RoutesContainer from './components/RoutesContainer';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <h1>Ayda Sholani</h1>
-      </header>
+      <Header />
       <Navbar />
       <main>
         <RoutesContainer />
