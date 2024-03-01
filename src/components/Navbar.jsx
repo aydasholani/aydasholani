@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-import logo from '../logo2.png'
 import SocialsIcons from '../icons/SocialsIcons'
+import Logo from '../logo.png'
 
 export default function Navbar() {
   return (
     <nav>
       <div>
       <Link>
-        <img src={logo} alt="logo" height={50} />
+        <img src={Logo} alt="logo" height={50} />
       </Link>
       </div>
 

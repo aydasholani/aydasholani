@@ -28,11 +28,7 @@ code {
 
 // Fixa css sen
 header {
-  width: 100%;
 
-  h1 {
-    font-size: 50px;
-  }
   .hero-image {
       background-image: linear-gradient(rgba(0, 0, 0, 0.551), rgba(0, 0, 0, 0.5)), url('./img/avatar.png');
       height: 600px;
@@ -41,6 +37,9 @@ header {
       position: relative;
     
       .hero-text {
+        h1 {
+          font-size: 50px;
+        }
         text-align: center;
         position: absolute;
         top: 50%;
@@ -117,7 +116,6 @@ button {
 }
 
 main {
-  // background-color: lightcoral;
   max-width: 940px;
   margin: 0 auto;
   height: 100%;
@@ -131,5 +129,4 @@ footer {
   text-align: center;
   padding: 10px;
   height: 75px;
-  // background-color: lightblue;
 }
