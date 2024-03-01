@@ -6,7 +6,7 @@ export default function Header() {
       <div 
         className='hero-image'
       >
-        <div class="hero-text">
+        <div className="hero-text">
           <h1>Ayda Sholani</h1>
 
           <p>
