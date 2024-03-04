@@ -1,11 +1,12 @@
 nav {
-  padding: 10px;
+  padding: 0 10px;
   overflow: hidden;
   position: sticky;
   transition: top 0.3s;
   top: 0;
   display: flex;
   justify-content: space-between;
+  background-color: $navbar-background;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   
