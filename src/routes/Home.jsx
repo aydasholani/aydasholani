@@ -11,13 +11,19 @@ export default function Home() {
         <About />
       </section>
 
+      <div class="divider"></div>
+
       <section id='skills'>
         <Skills />
       </section>
 
+      <div class="divider"></div>
+
       <section id='work'>
         <Work />
       </section>
+
+      <div class="divider"></div>
 
       <section id='contact'>
         <Contact />
