@@ -6,18 +6,14 @@ export default function Header() {
       <div 
         className='hero-image'
       >
-        <div className="hero-text">
-          <h1>Ayda Sholani</h1>
-
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-
-          <button>Contact me</button>
+        <div className="hero-text-wrapper">
+          <div className="hero-text-container">
+            <h1>Welcome to Sholani's World!</h1>
+            <p>My name is Ayda, newly examined frontend developer and AI student based in Stockholm, Sweden. Combining my love for coding with my passion for artificial intelligence, I specialize in creating intuitive web experiences while exploring the exciting world of AI. Let's work together to build something amazing!</p>
+            <button className='btn primary'>Contact me</button>
+          </div>
         </div>
+
       </div>
     </header>
   )
