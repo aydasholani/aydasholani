@@ -1,46 +1,57 @@
 nav {
-  padding: 0 10px;
   overflow: hidden;
   position: sticky;
   transition: top 0.3s;
   top: 0;
-  display: flex;
-  justify-content: space-between;
   background-color: $navbar-background;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-  
-  a {
-    text-decoration: none;
-    margin: 10px;
-    margin-bottom: 0;
-    cursor: pointer;
-    font-size: 1.1em;
-    text-transform: uppercase;
-    font-weight: 500;
-    display: inline-block;
-    color: $text-color;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  padding: 5px 0;
 
-    img {
-      filter: invert(100%);
-      height: 60px;
-    }
-
-    svg {
-      margin: 0.2em;
-    }
-  }
-
-  .nav-links {
+  ul {
     display: flex;
-    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow: hidden;
+    max-width: 1024px;
 
-    &.socials {
-      margin-right: 20px;
-      a {
-        margin: 0;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.navbar-logo {
+        flex-shrink: 0;
+        justify-content: flex-start;
+
+        img {
+          filter: invert(100%);
+          height: 45px;
+          margin-left: 5px;
+          margin-top: 5px;
+        }
+      }
+
+      &.navbar-links {
+        flex-grow: 10;
+        font-size: 1em;
+        font-weight: 500;
+
+        a {
+          text-transform: uppercase;
+          margin-right: 10px;
+        }
+      }
+
+      &.navbar-socials {
+        flex-shrink: 0;
+        justify-content: flex-end;
+        
+        svg {
+          margin: 5px;
+        }
       }
     }
   }

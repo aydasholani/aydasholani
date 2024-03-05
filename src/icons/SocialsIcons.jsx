@@ -4,14 +4,14 @@ import { AiOutlineLinkedin } from "react-icons/ai";
 
 export default function SocialsIcons() {
   return (
-    <div className='nav-links socials'>
+    <div className='social-media'>
       <a 
         href="https://github.com/aydasholani" 
         rel="noreferrer noopener" 
         target="_blank" 
         aria-label="Visit my GitHub"
       >
-        <AiOutlineGithub size={30} title='Github'/>
+        <AiOutlineGithub size={25} title='Github'/>
       </a>
 
       <a 
@@ -20,7 +20,7 @@ export default function SocialsIcons() {
           target="_blank"
           aria-label="Visit my LinkedIn"
         >
-          <AiOutlineLinkedin size={30} title='LinkedIn'/>
+          <AiOutlineLinkedin size={25} title='LinkedIn'/>
         </a>
     </div>
   )
