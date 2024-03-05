@@ -1,6 +1,4 @@
-// import { HashLink } from "react-router-dom"
 import SocialsIcons from "../icons/SocialsIcons";
-import { AiOutlineMenu } from "react-icons/ai";
 import Logo from "../logo.png";
 import { HashLink } from "react-router-hash-link";
 
