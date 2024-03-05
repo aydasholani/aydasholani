@@ -97,7 +97,7 @@ export default function Footer() {
  
       {/* <img className="small-avatar" src={roundAvatar}></img> */}
       <div class="copyright">
-      <img className="small-avatar" src={roundAvatar} alt="small round avatar"></img>
+        <img className="small-avatar" src={roundAvatar} alt="small round avatar"></img>
         <p>&copy; 2024 Ayda Sholani. All rights reserved.</p>
         <img src={Logo} className="small-logo" alt="logo" height={10} />
       </div>

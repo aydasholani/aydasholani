@@ -1,7 +1,7 @@
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import Home from './routes/Home';
+import LandingPage from './routes/LandingPage';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Navbar />
       <Header />
       <main>
-        <Home />
+        <LandingPage />
       </main>
       <Footer />
     </>

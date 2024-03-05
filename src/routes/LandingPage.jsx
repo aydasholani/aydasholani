@@ -4,7 +4,7 @@ import Contact from './Contact'
 import Skills from './Skills'
 import Work from './Work'
 
-export default function Home() {
+export default function LandingPage() {
   return (
     <>
       <section id='about'>
