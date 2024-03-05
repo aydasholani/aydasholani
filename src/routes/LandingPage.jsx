@@ -1,5 +1,4 @@
 import React from 'react'
-import About from './About'
 import Contact from './Contact'
 import Skills from './Skills'
 import Work from './Work'
@@ -7,12 +6,6 @@ import Work from './Work'
 export default function LandingPage() {
   return (
     <>
-      <section id='about'>
-        <About />
-      </section>
-
-      <div class="divider"></div>
-
       <section id='skills'>
         <Skills />
       </section>
