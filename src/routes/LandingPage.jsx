@@ -1,26 +1,34 @@
-import React from 'react'
 import Contact from './Contact'
 import Skills from './Skills'
-import Work from './Work'
+import Projects from './Projects'
+import Hobbies from './Hobbies'
 
 export default function LandingPage() {
   return (
     <>
-      <section id='skills'>
-        <Skills />
-      </section>
+      <main>
+        <section id='skills'>
+          <Skills />
+        </section>
 
-      <div class="divider"></div>
+        <div className="divider"></div>
 
-      <section id='work'>
-        <Work />
-      </section>
+        <section id='projects'>
+          <Projects />
+        </section>
 
-      <div class="divider"></div>
+        <div className="divider"></div>
 
-      <section id='contact'>
-        <Contact />
-      </section>
+        <section id='contact'>
+          <Contact />
+        </section>
+
+        <div className="divider"></div>
+
+        <section id='hobbies'>
+          <Hobbies />
+        </section>
+      </main>
     </>
   )
 }

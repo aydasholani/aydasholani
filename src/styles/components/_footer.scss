@@ -31,11 +31,12 @@ footer {
     a {
       color: #fff;
       text-decoration: none;
+      // font-variant: small-caps;
       text-transform: capitalize;
     }
     a:hover {
       // text-decoration: underline;
-      color: $darkened-neon-green;
+      color: $darkened-neon-orange;
       svg {
         fill: $text-color;
       }
@@ -64,4 +65,3 @@ footer {
   }
 
   }
-

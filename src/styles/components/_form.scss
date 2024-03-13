@@ -1,0 +1,58 @@
+
+.contact-form-wrapper {
+  background: linear-gradient(to right, $neon-purple, $neon-blue);
+  margin: 0 auto;
+  padding-left: 1px ;
+  border-radius: 2px;
+
+  .container {
+    background-color: $background-color;
+    display: flex;
+
+    .contact-container {
+      width: 50%;
+      height: 100%;
+    }
+
+    .form-wrapper {
+      background-color: $dark-grey;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      form {
+       
+        display: flex;
+        flex-direction: column;
+        // max-width: 500px;
+        align-items: center;
+        justify-content: center;
+        row-gap: 20px;
+        
+        input[type=text], input[type=email], textarea {
+          max-width: 400px;
+          border: 1px solid $darkened-neon-purple;
+          border-radius: 5px;
+          color: $text-color;
+          background-color: transparent;
+        }
+        input::active {
+          background-color: $background-color;
+        }
+        
+        textarea {
+          max-height: 400px;
+          resize: none;
+        }
+        
+        label {
+          color: $text-color;
+          font-variant: small-caps;
+          
+        }
+        
+        
+      }
+      
+    }
+  }
+}
