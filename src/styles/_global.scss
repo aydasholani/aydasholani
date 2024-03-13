@@ -9,6 +9,7 @@ html, body {
  border: 0;
  font-size: 100%;
  vertical-align: baseline;
+ scroll-behavior: smooth;
 }
 
 body {
@@ -42,22 +43,13 @@ ol, ul, li {
   padding: 0;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
- display: block;
-}
-
 section {
   width: 100%;
-  padding: 10px;
-  margin: 40px 0;
+  padding-top: 60px;
+  margin: 60px 0;
   height: 100%;
-  height: calc(100vh - 100px);
+  height: calc(100vh);
+  background-color: $dark-grey;
 }
 
 .divider {
@@ -76,10 +68,15 @@ h2 {
 a {
   text-decoration: none;
   cursor: pointer;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   color: $text-color;
+
+  &:hover{
+    color: $darkened-neon-green;
+  }
 }
-a:hover {
-  color: $darkened-neon-green;
+
+.logo {
+  filter: invert(100%);
 }
