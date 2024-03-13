@@ -1,59 +1,91 @@
-import SocialsIcons from "../icons/SocialsIcons";
+import React from 'react'
 import Logo from "../logo.png";
-import { HashLink } from "react-router-hash-link";
+import GithubIconLink from '../icons/GithubIconLink';
+import LinkedInIconLink from '../icons/LinkedInIconLink';
+import { HashLink } from 'react-router-hash-link';
 
 export default function Navbar() {
   return (
-    <nav>
-      <ul>
-        <li className="navbar-logo">
-          <HashLink smooth to="#">
-            <img src={Logo} alt="logo" height={50} />
-          </HashLink>
-        </li>
+    <>
+      <nav>
+        <div className="navbar-flex-wrapper">
+          <div className="logo-container">
+            <HashLink
+              to="/#"
+              scroll={(e) =>
+                e.scrollIntoView({ behavior: "smooth", block: "start" })
+              }
+              
+            >
+              <img src={Logo} alt="logo" className="logo"/>
+            </HashLink>
+          </div>
 
-        <li className="navbar-links">
-          <HashLink smooth to="#">
-            Home
-          </HashLink>
-          
-          <HashLink
-            to="#about"
-            scroll={(e) =>
-              e.scrollIntoView({ behavior: "smooth", block: "end" })
-            }
-          >
-            About
-          </HashLink>
-          <HashLink
-            to="#skills"
-            scroll={(e) =>
-              e.scrollIntoView({ behavior: "smooth", block: "end" })
-            }
-          >
-            Skills
-          </HashLink>
-          <HashLink
-            to="#work"
-            scroll={(e) =>
-              e.scrollIntoView({ behavior: "smooth", block: "end" })
-            }
-          >
-            work
-          </HashLink>
-          <HashLink
-            to="#contact"
-            scroll={(e) =>
-              e.scrollIntoView({ behavior: "smooth", block: "end" })
-            }
-          >
-            contact
-          </HashLink>
-        </li>
-        <li className="navbar-socials">
-          <SocialsIcons />
-        </li>
-      </ul>
-    </nav>
-  );
+          <ul>
+            <li>
+              <HashLink 
+                to="/#"
+                scroll={(e) =>
+                  e.scrollIntoView({ behavior: "smooth", block: "start" })
+                }
+              >
+                Home
+              </HashLink>
+            </li>
+
+            <li>
+              <HashLink
+                to="/#skills"
+                scroll={(e) =>
+                  e.scrollIntoView({ behavior: "smooth", block: "start" })
+                }
+              >
+                Skills
+              </HashLink>
+            </li>
+
+            <li>
+              <HashLink 
+                to="/#projects"
+                scroll={(e) =>
+                  e.scrollIntoView({ behavior: "smooth", block: "start" })
+                }
+              >
+                Projects
+              </HashLink>
+            </li>
+
+            <li>
+              <HashLink 
+                to="/#contact"
+                scroll={(e) =>
+                  e.scrollIntoView({ behavior: "smooth", block: "start" })
+                }
+              >
+                Contact
+              </HashLink>
+            </li>
+
+            <li>
+              <HashLink 
+                to="/#hobbies"
+                scroll={(e) =>
+                  e.scrollIntoView({ behavior: "smooth", block: "start" })
+                }
+              >
+                Hobbies
+              </HashLink>
+            </li>
+
+          </ul>
+
+          <div className="social-media">
+            <GithubIconLink />
+            <LinkedInIconLink />
+          </div>
+        </div>
+      </nav>
+    </>
+  ) 
+
 }
