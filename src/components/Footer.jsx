@@ -8,15 +8,15 @@ import roundAvatar from '../img/round.png'
 export default function Footer() {
   return (
     <footer>
-      <div class="footer-content">
-        <div class="contact-info">
+      <div className="footer-content">
+        <div className="contact-info">
           <h3>Contact</h3>
           <p>Email: ayda.sholani@gmail.com</p>
           <p>Phone: +46707479001</p>
           <p>Address: Stockholm, Sweden</p>
         </div>
 
-        <div class="social-media">
+        <div className="social-media">
           <h3>Follow me</h3>
           <li>
           <a 
@@ -40,7 +40,7 @@ export default function Footer() {
           </li>
         </div>
 
-        <div class="navigation">
+        <div className="navigation">
           <h3>Quick Links</h3>
           <ul>
             <li>
@@ -94,9 +94,7 @@ export default function Footer() {
         </div>
       </div>
 
- 
-      {/* <img className="small-avatar" src={roundAvatar}></img> */}
-      <div class="copyright">
+      <div className="copyright">
         <img className="small-avatar" src={roundAvatar} alt="small round avatar"></img>
         <p>&copy; 2024 Ayda Sholani. All rights reserved.</p>
         <img src={Logo} className="small-logo" alt="logo" height={10} />
