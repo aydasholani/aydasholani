@@ -1,25 +1,23 @@
 import React from 'react'
-import Logo from "../logo.png";
 import GithubIconLink from '../icons/GithubIconLink';
 import LinkedInIconLink from '../icons/LinkedInIconLink';
 import { HashLink } from 'react-router-hash-link';
+import DownloadCv from './DownloadCv';
+import Logo from '../icons/Logo'
 
 export default function Navbar() {
   return (
     <>
       <nav>
         <div className="navbar-flex-wrapper">
-          <div className="logo-container">
-            <HashLink
-              to="/#"
-              scroll={(e) =>
-                e.scrollIntoView({ behavior: "smooth", block: "start" })
-              }
-              
-            >
-              <img src={Logo} alt="logo" className="logo"/>
-            </HashLink>
-          </div>
+          <HashLink
+            to="/#"
+            scroll={(e) =>
+              e.scrollIntoView({ behavior: "smooth", block: "start" })
+            }
+          >
+            <Logo />
+          </HashLink>
 
           <ul>
             <li>
@@ -80,6 +78,7 @@ export default function Navbar() {
           </ul>
 
           <div className="social-media">
+            <DownloadCv />
             <GithubIconLink />
             <LinkedInIconLink />
           </div>
