@@ -1,9 +1,9 @@
 import React from "react";
-import Logo from "../smallLogo.png";
 import { HashLink } from "react-router-hash-link";
-import { AiOutlineGithub } from "react-icons/ai";
-import { AiOutlineLinkedin } from "react-icons/ai";
+import GithubIconLink from '../icons/GithubIconLink';
+import LinkedInIconLink from '../icons/LinkedInIconLink';
 import roundAvatar from '../img/round.png'
+import SmallLogo from "../icons/SmallLogo";
 
 export default function Footer() {
   return (
@@ -25,7 +25,8 @@ export default function Footer() {
             target="_blank" 
             aria-label="Visit my GitHub"
           >
-            Github <AiOutlineGithub size={20} title='Github'/>
+            Github             <GithubIconLink size={20} />
+       
           </a>
           </li>
           <li>
@@ -35,7 +36,7 @@ export default function Footer() {
           target="_blank"
           aria-label="Visit my LinkedIn"
         >
-          Linkedin <AiOutlineLinkedin size={20} title='LinkedIn'/>
+          Linkedin      <LinkedInIconLink size={20}/>
         </a>
           </li>
         </div>
@@ -59,7 +60,7 @@ export default function Footer() {
               </HashLink>
             </li>
             <li>
-              {" "}
+        
               <HashLink
                 to="#skills"
                 scroll={(e) =>
@@ -95,9 +96,13 @@ export default function Footer() {
       </div>
 
       <div className="copyright">
-        <img className="small-avatar" src={roundAvatar} alt="small round avatar"></img>
+        <img 
+          className="small-avatar" 
+          src={roundAvatar} alt="small round avatar" />
+
         <p>&copy; 2024 Ayda Sholani. All rights reserved.</p>
-        <img src={Logo} className="small-logo" alt="logo" height={10} />
+        
+        <SmallLogo />
       </div>
     </footer>
   );
