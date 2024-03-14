@@ -1,23 +1,30 @@
 import React from 'react'
+import { HashLink } from 'react-router-hash-link';
+
+import MyCV from "../files/ayda-sholani-cv.pdf";
+
 import GithubIconLink from '../icons/GithubIconLink';
 import LinkedInIconLink from '../icons/LinkedInIconLink';
-import { HashLink } from 'react-router-hash-link';
-import DownloadCv from './DownloadCv';
-import Logo from '../icons/Logo'
+import cv from '../assets/cv.svg'
+import logo from '../assets/logo.svg'
+
 
 export default function Navbar() {
   return (
-    <>
       <nav>
         <div className="navbar-flex-wrapper">
-          <HashLink
-            to="/#"
-            scroll={(e) =>
-              e.scrollIntoView({ behavior: "smooth", block: "start" })
-            }
-          >
-            <Logo />
-          </HashLink>
+          <div className="logo-wrapper">
+            <HashLink
+              to="/#"
+              scroll={(e) =>
+                e.scrollIntoView({ behavior: "smooth", block: "start" })
+              }
+            >
+              <svg>
+                <use xlinkHref={`${logo}#logo`}></use>
+              </svg>
+            </HashLink>
+          </div>
 
           <ul>
             <li>
@@ -78,13 +85,21 @@ export default function Navbar() {
           </ul>
 
           <div className="social-media">
-            <DownloadCv />
+            <a 
+              href={MyCV} 
+              download="Ayda Sholani - CV.pdf"
+            >
+              <svg>
+                <use xlinkHref={`${cv}#cv`}></use>
+              </svg>
+            </a>
+
             <GithubIconLink />
+            
             <LinkedInIconLink />
           </div>
         </div>
       </nav>
-    </>
   ) 
 
 }

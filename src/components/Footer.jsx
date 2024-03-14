@@ -3,7 +3,8 @@ import { HashLink } from "react-router-hash-link";
 import GithubIconLink from '../icons/GithubIconLink';
 import LinkedInIconLink from '../icons/LinkedInIconLink';
 import roundAvatar from '../img/round.png'
-import SmallLogo from "../icons/SmallLogo";
+// import SmallLogo from "../icons/SmallLogo";
+import SmallLogo from '../assets/small-logo.svg'
 
 export default function Footer() {
   return (
@@ -102,7 +103,9 @@ export default function Footer() {
 
         <p>&copy; 2024 Ayda Sholani. All rights reserved.</p>
         
-        <SmallLogo />
+        <svg>
+          <use xlinkHref={`${SmallLogo}#small-logo`}></use>
+        </svg>
       </div>
     </footer>
   );

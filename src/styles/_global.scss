@@ -65,6 +65,10 @@ h2 {
   font-size: 40px
 }
 
+svg {
+  fill: $text-color;
+}
+
 a {
   text-decoration: none;
   cursor: pointer;
@@ -74,9 +78,8 @@ a {
 
   &:hover{
     color: $darkened-neon-green;
+    svg {
+      fill: $darkened-neon-green;
+    }
   }
-}
-
-.logo {
-  filter: invert(100%);
 }
