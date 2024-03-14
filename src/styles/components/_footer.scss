@@ -42,19 +42,27 @@ footer {
     text-align: center;
     margin-top: 30px;
     font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    img {
-      margin: 10px;
+    .round-avatar {
+      background-image: url('../../img/round.png');
+      width: 125px;
+      height: 125px;
+      background-size: cover;
+      border-radius: 100%;
     }
-    .small-avatar {
-      width: 100px;
-      z-index: 1;
-    }
+
     svg {
-      margin: 10px;
-    }     
-    
+      margin-left: 5px;
+      width: 30px;
+      height: 30px;
+    }
+
   }
 
 
 }
+
+

@@ -1,9 +1,8 @@
 import React from "react";
 import { HashLink } from "react-router-hash-link";
+
 import GithubIconLink from '../icons/GithubIconLink';
 import LinkedInIconLink from '../icons/LinkedInIconLink';
-import roundAvatar from '../img/round.png'
-// import SmallLogo from "../icons/SmallLogo";
 import SmallLogo from '../assets/small-logo.svg'
 
 export default function Footer() {
@@ -96,11 +95,10 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="copyright">
-        <img 
-          className="small-avatar" 
-          src={roundAvatar} alt="small round avatar" />
 
+      <div className="copyright">
+        <div className="round-avatar"></div>
+        
         <p>&copy; 2024 Ayda Sholani. All rights reserved.</p>
         
         <svg>
