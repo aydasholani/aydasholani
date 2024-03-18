@@ -17,35 +17,41 @@ export default function ContactForm() {
     e.target.reset()
   };
   return (
-    <form onSubmit={handleOnSubmit} >
-
-      <div className="mb-3">
-        <label htmlFor="user_name" className="col-form-label">Name:</label>
+    <form onSubmit={handleOnSubmit}>
+      <div className="form-floating mb-2">
         <input 
           type="text" 
           name="user_name" 
           id="user_name" 
-          className="form-control" />
-      </div>
-      <div className="mb-3">
-        <label htmlFor="email" className="col-form-label">Email:</label>
-        <input 
-          type="email" 
-          name="email" 
-          id="email"
-          className="form-control" />
-      </div>
-      <div className="mb-3">
-        <label htmlFor="message" className="col-form-label">Message:</label>
-        <textarea 
-          name="message"
-          id="message"
-          className="form-control"
-          cols="30" 
+          placeholder="Jane Doe"
+          className="form-control form-control-sm" 
         />
+        <label htmlFor="user_name" className="">Name</label>
+  
       </div>
-      <div className="modal-footer">
-        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <div className="form-floating mb-2">
+          <input 
+            type="email" 
+            name="email" 
+            id="email"
+            className="form-control form-control-sm" 
+            placeholder="janedoe@example.email.com"
+          />
+        <label htmlFor="email">Email</label>
+      </div>
+      <div className="form-floating mb-2">
+          <textarea 
+            name="message"
+            id="message"
+            className="form-control form-control-sm"
+            placeholder="Enter your message here..."
+          />
+        <label htmlFor="message">Message</label>
+   
+      </div>
+
+      <div className="modal-footer button-group">
+        {/* <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}
         <button type="submit" className="btn btn-primary">Send Message</button>
       </div>
     </form>
