@@ -3,7 +3,8 @@ import React from "react";
 export default function Contact() {
   return (
     <>
-      <div className="contact-form-wrapper">
+      {/* <div className="contact-form-wrapper"> */}
+      <div className="container text-center">
         <div className="container">
           <div className="contact-container">
             <h3>Contact me</h3>

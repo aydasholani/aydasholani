@@ -73,6 +73,8 @@ export default function Skills() {
 
   return (
     <>
+    <div className="container text-center">
+
     <header>
       <h2>Skills</h2>
     </header>
@@ -81,6 +83,7 @@ export default function Skills() {
       {displaySkills}
       </ul>
     </article>
+    </div>
     </>
   )
 }
