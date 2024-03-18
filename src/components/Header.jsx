@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from 'react-bootstrap'
 export default function Header() {
   return (
-    <header className='container-fluid'>
+    <header>
       <div className='hero-image'>
         <div className="hero-text-wrapper">
           <div className="hero-text-container">
@@ -12,7 +12,6 @@ export default function Header() {
               Let's work together to build something amazing!
             </p>
             <Button>bootstrap</Button>
-            <button className='btn primary'>Contact me</button>
           </div>
         </div>
       </div>
