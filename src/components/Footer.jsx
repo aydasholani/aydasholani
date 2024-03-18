@@ -19,25 +19,10 @@ export default function Footer() {
         <div className="social-media">
           <h3>Follow me</h3>
           <li>
-          <a 
-            href="https://github.com/aydasholani" 
-            rel="noreferrer noopener" 
-            target="_blank" 
-            aria-label="Visit my GitHub"
-          >
-            Github             <GithubIconLink size={20} />
-       
-          </a>
+            <GithubIconLink size={20} />
           </li>
           <li>
-          <a 
-          href="https://www.linkedin.com/in/ayda-s-a2b663200/" 
-          rel="noreferrer noopener" 
-          target="_blank"
-          aria-label="Visit my LinkedIn"
-        >
-          Linkedin      <LinkedInIconLink size={20}/>
-        </a>
+            <LinkedInIconLink size={20}/>
           </li>
         </div>
 
