@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button } from 'react-bootstrap'
+import ContactFormModal from '../routes/ContactFormModal'
+
 export default function Header() {
   return (
     <header>
@@ -11,7 +12,7 @@ export default function Header() {
               Combining my love for coding with my passion for artificial intelligence, I specialize in creating intuitive web experiences while exploring the exciting world of AI. 
               Let's work together to build something amazing!
             </p>
-            <Button>bootstrap</Button>
+            <ContactFormModal />
           </div>
         </div>
       </div>

@@ -6,7 +6,6 @@ function Navigation({ activeItem, toggleClass }) {
     { id: 'home', text: 'Home', link: '/#' },
     { id: 'skills', text: 'Skills', link: '/#skills' },
     { id: 'projects', text: 'Projects', link: '/#projects' },
-    { id: 'contact', text: 'Contact', link: '/#contact' },
     { id: 'hobbies', text: 'Hobbies', link: '/#hobbies' }
   ];
 
