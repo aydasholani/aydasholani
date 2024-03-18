@@ -65,24 +65,24 @@ export default function Skills() {
 
   const displaySkills = mySkills.map((skill) => {
     return (
-      <li key={skill.name}>
-        {skill.icon} {skill.name}
-      </li>
+      <div className='col-6' key={skill.name}>
+        <div className="p-3 bg-dark text-white">
+          {skill.icon} {skill.name}
+        
+        </div>
+      </div>
     )
   })
 
   return (
     <>
     <div className="container text-center">
-
     <header>
       <h2>Skills</h2>
     </header>
-    <article className="my-skills">
-      <ul>
-      {displaySkills}
-      </ul>
-    </article>
+      <div className='skills row g-4'>
+        {displaySkills}
+      </div>
     </div>
     </>
   )
