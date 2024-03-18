@@ -17,8 +17,6 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   line-height: 1.5;
-  background-color: $background-color;
-  color: $text-color;
   overflow-x: hidden;
   text-align: center;
   -webkit-font-smoothing: antialiased;
@@ -49,7 +47,7 @@ section {
   margin: 60px 0;
   height: 100%;
   height: calc(100vh);
-  background-color: $dark-grey;
+  // background-color: $dark-grey;
 }
 
 .divider {
@@ -66,20 +64,40 @@ h2 {
 }
 
 svg {
-  fill: $text-color;
+  fill: $body-color;
 }
 
 a {
-  text-decoration: none;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  color: $text-color;
-
-  &:hover{
-    color: $darkened-neon-green;
-    svg {
-      fill: $darkened-neon-green;
-    }
+  svg:hover {
+    fill: $primary
   }
 }
+
+// a {
+//   text-decoration: none;
+//   cursor: pointer;
+//   -webkit-transition: all 0.3s ease-in-out;
+//   transition: all 0.3s ease-in-out;
+//   color: $text-color;
+
+//   svg {
+//     -webkit-transition: all 0.3s ease-in-out;
+//     transition: all 0.3s ease-in-out;
+//   }
+
+//   &:hover{
+//     color: $darkened-neon-green;
+//     color: $owl-pink;
+
+//     svg {
+//       fill: $darkened-neon-green;
+//       fill: $owl-pink;
+//     }
+//   }
+// }
+
+// .active {
+//   color: $secondary-color;
+//   color: $owl-pink-dark;
+// }
+

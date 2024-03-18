@@ -14,15 +14,18 @@
   cursor: pointer;
 
   &.primary {
+    background-color: $button-background;
     // box-shadow: 0px 0px 14px -7px $darkened-neon-pink;
-    background-image: linear-gradient(45deg, $neon-orange, $neon-green  51%, $neon-orange  100%);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+    // background-image: linear-gradient(45deg, $neon-orange, $neon-green  51%, $neon-orange  100%);
+    // user-select: none;
+    // -webkit-user-select: none;
+    // touch-action: manipulation;
 
     &:hover {
-      background-position: right center;
-      text-decoration: none;
+      // background-position: right center;
+      // text-decoration: none;
+      background-color: $button-background-hover;
+      color: $text-color;
     }
 
     &:active {

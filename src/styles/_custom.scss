@@ -1,0 +1,27 @@
+$primary:#FF0266;
+$secondary:#FF7597;
+
+$body-bg: #010203;
+$body-color:  #FFFAF0;
+$body-emphasis-color: #FFFAF0;
+$body-secondary-bg:#FFFAF0;
+
+$link-decoration: none;
+$body-text-align: center;
+$link-color: #FFFAF0;
+
+$link-hover-color: $primary;
+$navbar-dark-color: #FFFAF0;
+$navbar-dark-hover-color: $primary;
+$navbar-dark-active-color: $secondary;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "light":      $light,
+  "dark":       $dark
+);
+
+
+
+@import '~bootstrap/scss/bootstrap';

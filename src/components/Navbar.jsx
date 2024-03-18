@@ -1,5 +1,6 @@
-import React from 'react'
+import { useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
+
 
 import MyCV from "../files/ayda-sholani-cv.pdf";
 
@@ -10,6 +11,13 @@ import logo from '../assets/logo.svg'
 
 
 export default function Navbar() {
+  const [activeItem, setActiveItem] = useState(null);
+
+  const toggleClass = (itemName) => {
+    setActiveItem(activeItem === itemName ? null : itemName);
+  };
+
+
   return (
       <nav>
         <div className="navbar-flex-wrapper">
@@ -33,6 +41,8 @@ export default function Navbar() {
                 scroll={(e) =>
                   e.scrollIntoView({ behavior: "smooth", block: "start" })
                 }
+                className={activeItem === 'home' ? "active" : ""}
+                onClick={() => toggleClass('home')}
               >
                 Home
               </HashLink>
@@ -44,6 +54,8 @@ export default function Navbar() {
                 scroll={(e) =>
                   e.scrollIntoView({ behavior: "smooth", block: "start" })
                 }
+                className={activeItem === 'skills' ? "active" : ""}
+                onClick={() => toggleClass('skills')}
               >
                 Skills
               </HashLink>
@@ -55,6 +67,8 @@ export default function Navbar() {
                 scroll={(e) =>
                   e.scrollIntoView({ behavior: "smooth", block: "start" })
                 }
+                className={activeItem === 'projects' ? "active" : ""}
+                onClick={() => toggleClass('projects')}
               >
                 Projects
               </HashLink>
@@ -66,6 +80,8 @@ export default function Navbar() {
                 scroll={(e) =>
                   e.scrollIntoView({ behavior: "smooth", block: "start" })
                 }
+                className={activeItem === 'contact' ? "active" : ""}
+                onClick={() => toggleClass('contact')}
               >
                 Contact
               </HashLink>
@@ -77,6 +93,8 @@ export default function Navbar() {
                 scroll={(e) =>
                   e.scrollIntoView({ behavior: "smooth", block: "start" })
                 }
+                className={activeItem === 'hobbies' ? "active" : ""}
+                onClick={() => toggleClass('hobbies')}
               >
                 Hobbies
               </HashLink>

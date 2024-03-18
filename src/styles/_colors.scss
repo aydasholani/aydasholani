@@ -3,9 +3,9 @@ $success-color: #28a745;
 $error-color: #dc3545;
 $warning-color: #ffc107;
 $info-color: #17a2b8;
-
+  
 // Background colors
-$background-color: #010203;
+
 $navbar-background: rgba(23, 23, 23, 0.158);
 $footer-background-color: #212529;
 $dark-grey: #131517;
@@ -20,9 +20,11 @@ $neon-blue: #89CFFD;
 $neon-pink: #FF89B5;
 $neon-orange: #FFAB76;
 $neon-purple: #BAA8FF;
+$owl-pink: #FF7597;
+$owl-pink-dark: #FF0266;
 
-$primary-color: #FF77FF;
-$secondary-color: #EE5760;
+$primary-color: #FF7597;
+$secondary-color: #FF0266;
 
 $darkened-neon-green: darken($neon-green, 20%);
 $darkened-neon-blue: darken($neon-blue, 20%);
@@ -31,6 +33,8 @@ $darkened-neon-orange: darken($neon-orange, 20%);
 $darkened-neon-purple: darken($neon-purple, 20%);
 
 
+$button-background: $secondary-color;
+$button-background-hover: scale-color($button-background, $lightness: -20%);
 
 
 

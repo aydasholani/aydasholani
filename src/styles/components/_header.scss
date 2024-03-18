@@ -17,14 +17,14 @@ header {
         border-radius: 2px;
         margin: 10% 5%;
         background: linear-gradient(to right, $neon-pink, $neon-purple, $neon-blue, $neon-green, $neon-orange);
-        color: $text-color;
+        // color: $text-color;
         width: 50%;
         float: inline-end;
         text-align: center;
       }
 
       .hero-text-container {
-        background: $background-color;
+        background: $body-bg;
         padding: 2rem;
         display: flex;
         flex-direction: column;

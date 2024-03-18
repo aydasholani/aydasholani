@@ -1,0 +1,31 @@
+// $small: 0;
+// $medium: 640px;
+// $large: 1024px;
+// $xlarge: 1200px;
+// $xxlarge: 1440px;
+
+@include media-breakpoint-up(sm) {
+  header {
+    .hero-text-wrapper {
+      width: 100%;
+      margin: 10% 0; 
+
+      .hero-text-container {
+        padding: 1rem;
+        row-gap: 20px;
+
+        h1 {
+          font-size: 30px;
+        }
+        p {
+          font-size: normal
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) { ... }
+@include media-breakpoint-up(lg) { ... }
+@include media-breakpoint-up(xl) { ... }
+@include media-breakpoint-up(xxl) { ... }
