@@ -1,4 +1,5 @@
 import emailjs from "@emailjs/browser";
+import { Col } from "react-bootstrap";
 
 export default function ContactForm() {
   const SERVICE_ID = "service_rv3t9gc";
@@ -16,7 +17,9 @@ export default function ContactForm() {
       });
     e.target.reset()
   };
+  
   return (
+    <Col md={{ span: 6, offset: 3 }}>
     <form onSubmit={handleOnSubmit}>
       <div className="form-floating mb-2">
         <input 
@@ -55,5 +58,6 @@ export default function ContactForm() {
         <button type="submit" className="btn btn-primary">Send Message</button>
       </div>
     </form>
+    </Col>
   )
 }

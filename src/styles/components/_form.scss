@@ -1,9 +1,9 @@
-.contact-form {
+#contactModal {
   &.modal {
-
     .btn-close {
       background-color: $primary;
     }
+
     .modal-content {
       background-color: $dark-grey;
       textarea {
@@ -24,14 +24,23 @@
           outline: 1px solid slategrey;
         }
       }
-    }
-    .form-control:focus{
-      border: $primary;
-      box-shadow: inset();
-    }
-    .modal-footer {
-      &.button-group {
-        border-top: none;
+      .modal-body {
+        height: 350px;
+        max-height: 350px; 
+        .row {
+          .col {
+            justify-content: center;
+          }
+        }
+      }
+      .form-control:focus{
+        border: $primary;
+        box-shadow: inset();
+      }
+      .modal-footer {
+        &.button-group {
+          border-top: none;
+        }
       }
     }
   }

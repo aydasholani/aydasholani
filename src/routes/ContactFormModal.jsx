@@ -1,5 +1,4 @@
-import GithubIconLink from "../icons/GithubIconLink";
-import LinkedInIconLink from "../icons/LinkedInIconLink";
+
 import ContactForm from "./ContactForm";
 export default function ContactFormModal() {
 
@@ -8,16 +7,16 @@ export default function ContactFormModal() {
     <>
       <button 
         type="button" 
-        className="btn btn-primary" 
+        className="btn btn-primary hollow" 
         data-bs-toggle="modal" 
         data-bs-target="#contactModal" 
         data-bs-whatever="ayda.sholani@gmail.com"
       >
-        Contact me!
+        Contact Me!
       </button>
 
       <div 
-        className="modal fade contact-form" 
+        className="modal fade" 
         id="contactModal" 
         tabIndex="-1" 
         aria-labelledby="ContactModal" 
@@ -46,12 +45,15 @@ export default function ContactFormModal() {
                 </div>
               </div>
     
-              <div className="modal-footer ">
-                <div className="col text-center">
-                  <GithubIconLink />
-                  <LinkedInIconLink />
-                </div>
+            </div>
+            <div className="modal-footer ">
+              <div className="col text-center">
+                github
+                linkedin
               </div>
+              <span>
+              
+              </span>
             </div>
           </div>
         </div>
