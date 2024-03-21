@@ -1,42 +1,57 @@
+// header {
+//   background-image: linear-gradient(rgba(0, 0, 0, 0.551), rgba(0, 0, 0, 0.5)), url('../../img/ayda1.png');
+//   height: 100vh;
+//   min-height: 600px;
+//   background-size: cover;
+//   // background-repeat: no-repeat;
+//   text-align: center;
+//   background-attachment: fixed;
+//   .hero-image {
+      
+//       // Parallax effect
+
+//       .hero-text-wrapper {
+//         background-color: rgb(0,0,0);
+//         background-color: rgba(0,0,0, 0.4);
+//         max-width: calc(100vw - 60%);
+//         padding: 3px;
+//         border-radius: 2px;
+//         margin: 10% 5%;
+//         background: linear-gradient(to right, $neon-pink, $neon-purple, $neon-blue, $neon-green, $neon-orange);
+//         // color: $text-color;
+//         width: 50%;
+//         float: inline-end;
+//         text-align: center;
+//       }
+
+//       .hero-text-container {
+//         background: $body-bg;
+//         padding: 2rem;
+//         display: flex;
+//         flex-direction: column;
+//         row-gap: 40px;
+//         align-items: center;
+
+//         h1 {
+//           font-size: 50px;
+//         }
+//         p {
+//           font-size: larger;
+//         }
+//       }
+//     }
+//   }
+
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.551), rgba(0, 0, 0, 0.5)), url('../../img/ayda1.png');
-  height: 100vh;
-  min-height: 600px;
   background-size: cover;
-  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
   background-attachment: fixed;
-  .hero-image {
-      
-      // Parallax effect
 
-      .hero-text-wrapper {
-        background-color: rgb(0,0,0);
-        background-color: rgba(0,0,0, 0.4);
-        max-width: calc(100vw - 60%);
-        padding: 3px;
-        border-radius: 2px;
-        margin: 10% 5%;
-        background: linear-gradient(to right, $neon-pink, $neon-purple, $neon-blue, $neon-green, $neon-orange);
-        // color: $text-color;
-        width: 50%;
-        float: inline-end;
-        text-align: center;
-      }
-
-      .hero-text-container {
-        background: $body-bg;
-        padding: 2rem;
-        display: flex;
-        flex-direction: column;
-        row-gap: 40px;
-        align-items: center;
-
-        h1 {
-          font-size: 50px;
-        }
-        p {
-          font-size: larger;
-        }
-      }
-    }
+  .text-wrapper {
+    background-color: rgba(0,0,0, 0.4);
+    border-radius: 2px;
+    padding: 0.5rem;
   }
+}

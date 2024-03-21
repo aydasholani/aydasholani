@@ -1,26 +1,33 @@
-import React from 'react'
 import ContactFormModal from '../routes/ContactFormModal'
 import MyNavbar from './MyNavbar'
+import { Container, Row, Col } from 'react-bootstrap'
 
 export default function Header() {
   return (
-<>
-
-    <header>
+    <Container fluid className='p-0 gx-0'>
       <MyNavbar />
-      <div className='hero-image'>
-        <div className="hero-text-wrapper">
-          <div className="hero-text-container">
-            <h1>Welcome to Sholani's World!</h1>
-            <p>My name is Ayda, newly examined frontend developer and AI student based in Stockholm, Sweden. 
-              Combining my love for coding with my passion for artificial intelligence, I specialize in creating intuitive web experiences while exploring the exciting world of AI. 
-              Let's work together to build something amazing!
-            </p>
-            <ContactFormModal />
+        <header>
+          <div className='d-flex align-items-center justify-content-end vh-100'>
+            <Container >
+              <Row noGutters className='text-center justify-content-center'>
+                <Col xs md={{span: 6, offset: 6}} className='p-4 text-wrapper'>
+                  <Col className='p-2'>
+                    <h1>Ayda Sholani</h1>
+                    <h3>- Frontend Developer/AI Developer Student</h3>
+                  </Col>
+                  <Col className='p-3'>
+                    Hello there! 
+                    I'm Ayda Sholani, 
+                    a passionate frontend developer from Stockholm, Sweden, currently expanding my skills into AI development.
+                  </Col>
+                  <Col className='p-4'>
+                    <ContactFormModal />
+                  </Col>
+                </Col>
+              </Row>
+            </Container>
           </div>
-        </div>
-      </div>
-    </header>
-</>
+        </header>
+    </Container>
   )
 }
