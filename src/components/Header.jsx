@@ -1,9 +1,13 @@
 import React from 'react'
 import ContactFormModal from '../routes/ContactFormModal'
+import MyNavbar from './MyNavbar'
 
 export default function Header() {
   return (
+<>
+
     <header>
+      <MyNavbar />
       <div className='hero-image'>
         <div className="hero-text-wrapper">
           <div className="hero-text-container">
@@ -17,5 +21,6 @@ export default function Header() {
         </div>
       </div>
     </header>
+</>
   )
 }

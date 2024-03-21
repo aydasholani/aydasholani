@@ -1,58 +1,4 @@
-// nav {
-//   width: 100%;
-//   display: flex;
-//   justify-content: center;
-//   overflow: hidden;
-//   position: sticky;
-//   position: -webkit-sticky;
-//   top: 0;
-//   background-color: $navbar-background;
-//   -webkit-backdrop-filter: blur(8px);
-//   backdrop-filter: blur(8px);
-//   box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
-//   transition: top 0.3s;
 
-//   .navbar-flex-wrapper {
-//     display: flex;
-//     width: 1024px;
-//     justify-content: space-between;
-//     margin: 5px;
-
-//     .logo-wrapper {
-//         svg {
-//           width: 100%;
-//           height: 45px;
-//         } 
-//     }
-
-//     ul {
-//     padding: 10px 0;
-//     display: flex;
-//     column-gap: 15px;
-
-//       li {
-//         text-transform: uppercase;
-//         font-weight: 500;
-//         a {
-//           font-size: 1rem;
-//         }
-//       }
-//     }
-  
-//     .social-media {
-//       flex-basis: 15%;
-//       padding: 10px 0;
-//       display: flex;
-//       column-gap: 10px;
-//       flex-direction: row-reverse;
-
-//       svg {
-//         width: 25px;
-//         height: 25px;
-//       }
-//     }
-//   }
-// }
 nav {
   background-color: transparent;
   -webkit-backdrop-filter: blur(5px);
@@ -67,11 +13,19 @@ nav {
     }
   }
 
+  .nav-item {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
   .social-media {
     svg {
-      width: 25px;
-      height: 25px;
-      margin: 5px;
+      width: 30px;
+      height: 30px;
+      transition: fill 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+      &:hover {
+        fill: $primary;
+      }
     }
   }
 }

@@ -1,13 +1,13 @@
 header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.551), rgba(0, 0, 0, 0.5)), url('../../img/ayda1.png');
+  height: 100vh;
+  min-height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   .hero-image {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.551), rgba(0, 0, 0, 0.5)), url('../../img/ayda1.png');
-      height: 100vh;
-      min-height: 600px;
-      background-size: cover;
-      background-repeat: no-repeat;
       
       // Parallax effect
-      background-attachment: fixed;
 
       .hero-text-wrapper {
         background-color: rgb(0,0,0);

@@ -8,7 +8,7 @@
 html, body {
  border: 0;
  font-size: 100%;
- vertical-align: baseline;
+//  vertical-align: baseline;
  scroll-behavior: smooth;
 }
 
@@ -31,9 +31,9 @@ code {
 }
 
 main {
-  max-width: 1024px;
-  margin: 0 auto;
-  height: 100%;
+  // max-width: 1024px;
+  // margin: 0 auto;
+  // height: 100%;
 }
 
 ol, ul, li {
@@ -42,20 +42,20 @@ ol, ul, li {
 }
 
 section {
-  width: 100%;
-  padding-top: 60px;
-  margin: 60px 0;
-  height: 100%;
-  height: calc(100vh);
-  background-color: #0E0613  ;
+  // width: 100%;
+  // width: 100%;
+  // padding-top: 60px;
+  // margin: 60px 0;
+  // height: 100%;
+  // height: calc(100vh);
+  // background-color: #0E0613  ;
   // background-color: $dark-grey;
 }
 
-.divider {
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, $neon-pink, $neon-purple, $neon-blue, $neon-green, $neon-orange);
+header {
+  height: 100vh;
 }
+
 h1, h2, h3, h4,h5, h6{ 
   color: #AA4DB9;
 }
@@ -70,12 +70,25 @@ svg {
   fill: $body-color;
 }
 
-a {
-  svg:hover {
-    fill: $primary
-  }
-}
-
+// a {
+//   svg:hover {
+//     fill: $primary
+//   }
+// }
+// .icon-link-wrapper {
+//   a {
+//     fill: $body-bg;
+//     color: $body-bg;
+//   }
+//   &:hover {
+//     svg {
+//       fill: $primary;
+//     }
+//     a {
+//       color: $primary;
+//     }
+  // }
+// }
 // a {
 //   text-decoration: none;
 //   cursor: pointer;
@@ -104,3 +117,22 @@ a {
 //   color: $owl-pink-dark;
 // }
 
+.sticky-icons {
+  width: 25%;
+  height: 25vh;
+  float: right;
+  min-height: 200px;
+  overflow: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5%;
+}
+
+.main-content {
+  background-color: pink;
+  height: 100vh;
+
+  .row {
+    background-color: #AA4DB9;
+  }
+}
