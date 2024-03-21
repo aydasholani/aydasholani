@@ -14,7 +14,7 @@ export default function LandingPage() {
           </Col>
 
           <Col xs={12} id="projects" className='p-5'>
-          <Projects />
+            <Projects />
           </Col>
 
           <Col xs={12} id="testimonials" className='p-5'>
@@ -22,7 +22,7 @@ export default function LandingPage() {
           </Col>
 
           <Col xs={12} id="hobbies" className='p-5'>
-          <Hobbies />
+            <Hobbies className="section-wrapper" />
           </Col>
         </Row>
     </Container>

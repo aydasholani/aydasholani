@@ -45,7 +45,7 @@ export default function MyProjects() {
   })
 
   return (
-    <Row >
+    <Row className="p-4">
       {displayProjects}
     </Row>
   )

@@ -92,7 +92,7 @@ export default function MySkills() {
   })
 
   return (
-    <Row >
+    <Row className="p-4">
       {displaySkills}
     </Row>
   )
