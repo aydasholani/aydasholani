@@ -10,7 +10,8 @@ export default function MyNavbar() {
     { id: 'home', text: 'Home', link: '/#' },
     { id: 'skills', text: 'Skills', link: '/#skills' },
     { id: 'projects', text: 'Projects', link: '/#projects' },
-    { id: 'hobbies', text: 'Hobbies', link: '/#hobbies' }
+    { id: 'hobbies', text: 'Hobbies', link: '/#hobbies' },
+    { id: 'contact', text: 'Contact', link: '/#contact' },
   ];
 
   return (

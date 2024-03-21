@@ -1,7 +1,8 @@
-import Footer from './components/Footer';
+import MyFooter from './components/MyFooter';
 import Header from './components/Header';
 import LandingPage from './routes/LandingPage';
 import { ThemeProvider } from 'react-bootstrap';
+import Contact from './routes/Contact';
 function App() {
   return (
     <ThemeProvider
@@ -11,7 +12,8 @@ function App() {
 
       <Header />
       <LandingPage />
-      <Footer />
+      <Contact />
+      <MyFooter />
     </ThemeProvider>
   );
 }
