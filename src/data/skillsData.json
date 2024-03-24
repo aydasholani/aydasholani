@@ -1,0 +1,63 @@
+[
+  {
+    "name": "git",
+    "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+  },
+  {
+    "name": "html",
+    "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+  },
+  {
+    "name": "css",
+    "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+  }, 
+  {
+    "name": "scss",
+    "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg"
+  },
+  {
+    "name": "reactjs",
+    "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+  },
+  {
+    "name": "react-router-dom",
+    "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactrouter/reactrouter-original.svg"
+  },
+  {
+    "name": "react-bootstrap",
+    "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactbootstrap/reactbootstrap-original.svg"
+  },
+  {
+    "name": "vuejs",
+    "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg"    
+  },
+  {
+    "name": "javascript",
+    "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+  },
+  {
+    "name": "flask",
+    "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg"
+  },
+  {
+    "name": "python",
+    "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+  },
+  {
+    "name": "sqlite",
+    "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg"
+  },
+  {
+    "name": "sql-alchemy",
+    "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original.svg"
+  },
+
+  {
+    "name": "nodejs",
+    "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg"
+  },
+  {
+    "name": "npm",
+    "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg"
+  }
+]
