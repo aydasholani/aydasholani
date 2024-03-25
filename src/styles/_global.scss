@@ -35,14 +35,12 @@ ol, ul, li {
   padding: 0;
 }
 
-
-
 header {
   height: 100vh;
 }
 
 h1 { 
-  color: #C474D3;
+  color: $primary;
 
 }
 
@@ -100,4 +98,16 @@ textarea {
   height: 150px;
   background-size: cover;
   border-radius: 100%;
+}
+
+.btn-outline-primary {
+  font-weight: 400;
+}
+
+.btn-outline-secondary {
+  color: #fff;
+
+  svg:hover {
+    fill: #fff;
+  }
 }
