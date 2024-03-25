@@ -1,6 +1,5 @@
-import { useState } from 'react';
 import MyNavbar from './MyNavbar'
-import { Container, Row, Col, Button } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 
 export default function Header() {
   return (
