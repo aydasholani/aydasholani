@@ -1,6 +1,6 @@
 import { IoIosCall } from "react-icons/io";
 import { IoIosMail } from "react-icons/io";
-import { Modal, Button, Container, Row, Col} from "react-bootstrap"
+import { Modal, Button, Container, Row, Col, CloseButton} from "react-bootstrap"
 import { Link } from "react-router-dom";
 import ContactForm from "./ContactForm";
 
@@ -16,9 +16,7 @@ export default function ContactModal(props) {
     >
       <Modal.Header >
         <Modal.Title id="contained-modal-title-vcenter"><IoIosMail size={25}/> ayda.sholani@gmail.com</Modal.Title>
-        <Button variant="secondary" onClick={props.onHide}>
-          Close
-        </Button>
+        <CloseButton onClick={props.onHide} data-bs-theme="dark" className='bg-light p-2'/>
       </Modal.Header>
 
       <Modal.Body>

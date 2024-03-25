@@ -3,7 +3,9 @@ import Skills from './Skills'
 import Projects from './Projects'
 import Hobbies from './Hobbies'
 import Testimonials from './Testimonials';
+import ContactSection from './ContactSection';
 import { Container, Row, Col } from 'react-bootstrap';
+
 
 export default function LandingPage() {
   return (
@@ -23,6 +25,9 @@ export default function LandingPage() {
 
           <Col xs={12} id="hobbies" className='p-5'>
             <Hobbies className="section-wrapper" />
+          </Col>
+          <Col xs={12} id="hobbies" className='p-5'>
+            <ContactSection className="section-wrapper" />
           </Col>
         </Row>
     </Container>

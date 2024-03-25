@@ -3,9 +3,9 @@ import { IoIosMail } from "react-icons/io";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { Container, Row, Col, Nav } from "react-bootstrap";
 
-export default function Contact() {
+export default function ContactSection() {
   return (
-    <Container fluid 
+    <section
       className="p-4 text-center justify-content-center align-content-center contact-wrapper"
       id="contact"  
     >
@@ -32,6 +32,6 @@ export default function Contact() {
           </Nav>
         </Col>
       </Row>
-    </Container>
+    </section>
   )
 }
