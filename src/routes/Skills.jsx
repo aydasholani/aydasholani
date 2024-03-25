@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col} from "react-bootstrap";
 import skillsData from '../data/skillsData.json'
 
 export default function Skills() {
@@ -11,29 +11,21 @@ export default function Skills() {
 
   const displaySkills = skills.map((skill, index) => {
     return (  
-      <Col key={skill.index} className="p-2">
-        <Card 
-          bg="dark" 
-          text="white" 
-          className="project-card"
-        >
-          <Card.Body>
-            <Card.Img 
-              variant="top" 
-              src={`${skill.img}`} 
-              alt={skill.name} 
-            />
-          </Card.Body>
-        </Card>
+      <Col key={skill.index} bg="dark" className="skill" xs={2}>
+        <img 
+          variant="top" 
+          src={`${skill.img}`} 
+          alt={skill.name} 
+        />
       </Col>
     )
   })
 
   return (
-    <section className='d-flex align-items-center justify-content-center 100vh'>
-      <Container className="p-4">
+    <section className='d-flex justify-content-center 100vh'>
+      <Container className="mt-4">
         <h2>Skills</h2>
-        <Row className="p-4">
+        <Row className="mt-2 g-4 skills">
           {displaySkills}
         </Row>
       </Container>

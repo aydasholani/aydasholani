@@ -1,5 +1,10 @@
 .skills {
+justify-content: center;
   .skill {
-    background-color: $secondary;
+    width: fit-content;
+    img {
+      width: 50px;
+      height: 50px;
+    }
   }
 }
