@@ -19,7 +19,7 @@ module.exports = [
     "key": 2,
     "name": "translate_to_rovarspraket",
     "techs": "Python",
-    "description": "Python program that reads a text file from a GitHub link and translates the text into 'Robber's language' (Rövarspråk), encoding each consonant by appending 'o' and repeating the consonant.",
+    "description": "Python program to translate text from a GitHub link into 'Robber's language', encoding consonants by appending 'o' and repeating them.",
     "link": "https://github.com/aydasholani/translate_to_rovarspraket",
     "img": "rovarsprak.png"
   },

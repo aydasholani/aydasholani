@@ -14,8 +14,8 @@ export default function Projects() {
     const image = require(`../img/projectImage/${project.img}`);
 
     return (  
-      <Col key={project.key}>
-        <Card border="secondary" bg="dark" text="white" className="project-card">
+      <Col key={project.key} xs={12} sm={6} lg={4} className="mb-4 d-flex project-card">
+        <Card border="secondary" bg="dark" text="white" className="flex-fill">
           <Card.Img variant="top" src={image} alt={project.name} />
 
           <Card.Header>
@@ -40,10 +40,10 @@ export default function Projects() {
     )
   })
   return (
-    <section className='d-flex align-items-center justify-content-center 100vh'>
+    <section className='100vh'>
       <Container className="mt-4">
         <h2>Projects</h2>
-        <Row xs={1} md={2} lg={3} className="mt-4 g-4">
+        <Row className="mt-4 g-4">
           {displayProjects}
         </Row>
       </Container>
