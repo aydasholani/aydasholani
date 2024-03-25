@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import projectsData from '../data/projectsData.json'
+import projectsData from '../data/projectsData'
 import {Container, Row, Col, Card} from 'react-bootstrap';
+import { AiOutlineGithub } from "react-icons/ai";
 
 export default function Projects() {
   const [myProjects, setMyProjects] = useState([]);
@@ -10,25 +11,39 @@ export default function Projects() {
   }, []);
 
   const displayProjects = myProjects.map((project, index) => {
+    const image = require(`../img/projectImage/${project.img}`);
+
     return (  
-      <Col key={project.name}  xxs={6} md={4} lg={4} xl={4} className="p-2">
-        <Card bg="dark" text="white" className="project-card">
-        <Card.Header>{project.name}</Card.Header>
-          <Card.Body>
-            <Card.Img src={`https://picsum.photos/200/100?random=${index}`} alt={project.name} />
-            <Card.Title>{project.name}</Card.Title>
+      <Col key={project.key}>
+        <Card border="secondary" bg="dark" text="white" className="project-card">
+          <Card.Img variant="top" src={image} alt={project.name} />
+
+          <Card.Header>
+            <Card.Title>
+              {project.name} 
+            </Card.Title>             
+            <Card.Subtitle >
+              <code>{project.techs}</code>
+            </Card.Subtitle> 
+          </Card.Header>
+          <Card.Body className="mb-2">
             <Card.Text>{project.description}</Card.Text>
-            <Card.Link href={project.link} target="_blank">GitHub-Link</Card.Link>
+            
           </Card.Body>
+          <Card.Footer>
+            <Card.Link href={project.link} target='_blank'>
+              <AiOutlineGithub size={25} />   
+            </Card.Link>
+          </Card.Footer>
         </Card>
       </Col>
     )
   })
   return (
     <section className='d-flex align-items-center justify-content-center 100vh'>
-      <Container className="p-4">
+      <Container className="mt-4">
         <h2>Projects</h2>
-        <Row className="p-4">
+        <Row xs={1} md={2} lg={3} className="mt-4 g-4">
           {displayProjects}
         </Row>
       </Container>

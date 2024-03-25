@@ -41,18 +41,28 @@ header {
   height: 100vh;
 }
 
-h1, h2{ 
-  color: #AA4DB9;
+h1 { 
+  color: #C474D3;
+
 }
-h1 {
-  font-size: 50px
-}
+
 h2 {
-  font-size: 40px
+  color: $secondary;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-weight: 600;
 }
 
 svg {
   fill: $body-color;
+}
+
+a {
+  svg:hover {
+    fill: $primary;
+  }
 }
 
 .sticky-icons {
@@ -68,27 +78,26 @@ svg {
 
 // Ändrar färg på section
 section {
-  // background-color: $section-bg;
-  // Ändrar färg på bakgrunden till section rows
+  background-color: $section-bg;
+  border-radius: 24px;
+  padding: 8px;
+
   .section-wrapper {
-    background-color: $section-bg;
-
-  }
-  .row {
-    background-color: $section-bg;
-
-    .column {
-      background-color: #26292E;
-    }
+    border-radius: 16px;
   }
 }
 
-
+textarea {
+  resize: none;
+  overflow-y: scroll;
+  scrollbar-color: $primary $secondary;
+  scrollbar-width: thin;
+}
 
 .round-avatar {
   background-image: url('../img/round.png');
-  width: 125px;
-  height: 125px;
+  width: 150px;
+  height: 150px;
   background-size: cover;
   border-radius: 100%;
 }

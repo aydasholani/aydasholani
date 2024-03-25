@@ -1,7 +1,5 @@
-$primary:#FF0266;
-// $primary:#EA25B5;
-$primary:#FF82F4;
-$secondary:#FF7597;
+$primary:#FF6DAC;
+$secondary:#925165;
 $dark-grey: #131517;
 $neon-purple: #BAA8FF;
 
@@ -10,7 +8,7 @@ $body-color:  #FFFAF0;
 $body-emphasis-color: #FFFAF0;
 $body-secondary-bg:#FFFAF0;
 
-$primary-bg-subtle-dark: #131517;
+// $primary-bg-subtle-dark: #131517;
 // Navbar and links
 $link-decoration: none;
 $body-text-align: center;
@@ -20,42 +18,20 @@ $link-hover-color: $primary;
 $navbar-dark-color: #FFFAF0;
 $navbar-dark-hover-color: $primary;
 $navbar-dark-active-color: $secondary;
+$navbar-background: rgba(23, 23, 23, 0.158);
+$footer-background-color: #212529;
 
-$section-bg : #26292E;
+$section-bg : #16161d;
 // Forms
 $input-bg: #131517;
-// $form-valid-color:                  $form-feedback-valid-color !default;
-// $form-valid-border-color:           $form-feedback-valid-color !default;
-// $form-invalid-color:                $form-feedback-invalid-color !default;
-// $form-invalid-border-color:         $form-feedback-invalid-color !default;
-// // scss-docs-end form-validation-colors
 
-// // scss-docs-start form-validation-states
-// $form-validation-states: (
-//   "valid": (
-//     "color": var(--#{$prefix}form-valid-color),
-//     "icon": $form-feedback-icon-valid,
-//     "tooltip-color": #fff,
-//     "tooltip-bg-color": var(--#{$prefix}success),
-//     "focus-box-shadow": 0 0 $input-btn-focus-blur $input-focus-width rgba(var(--#{$prefix}success-rgb), $input-btn-focus-color-opacity),
-//     "border-color": var(--#{$prefix}form-valid-border-color),
-//   ),
-//   "invalid": (
-//     "color": var(--#{$prefix}form-invalid-color),
-//     "icon": $form-feedback-icon-invalid,
-//     "tooltip-color": #fff,
-//     "tooltip-bg-color": var(--#{$prefix}danger),
-//     "focus-box-shadow": 0 0 $input-btn-focus-blur $input-focus-width rgba(var(--#{$prefix}danger-rgb), $input-btn-focus-color-opacity),
-//     "border-color": var(--#{$prefix}form-invalid-border-color),
-//   )
-// ) !default;
 $theme-colors: (
   "primary":    $primary,
   "secondary":  $secondary,
   "light":      $light,
   "dark":       $dark,
-);
-
-
+  "info":       $info,
+  );
+  
 
 @import '~bootstrap/scss/bootstrap';
