@@ -11,7 +11,7 @@ export default function MyNavbar() {
     { id: 'skills', text: 'Skills', link: '/#skills' },
     { id: 'projects', text: 'Projects', link: '/#projects' },
     { id: 'testimonials', text: 'Testimonials', link: '/#testimonials' },
-    { id: 'hobbies', text: 'Hobbies', link: '/#hobbies' },
+    // { id: 'hobbies', text: 'Hobbies', link: '/#hobbies' },
     { id: 'contact', text: 'Contact', link: '/#contact' },
   ];
 

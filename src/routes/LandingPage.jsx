@@ -23,10 +23,10 @@ export default function LandingPage() {
             <Testimonials />
           </Col>
 
-          <Col xs={12} id="hobbies" className='p-5'>
+          {/* <Col xs={12} id="hobbies" className='p-5'>
             <Hobbies className="section-wrapper" />
-          </Col>
-          <Col xs={12} id="hobbies" className='p-5'>
+          </Col> */}
+          <Col xs={12} id="contact" className='p-5'>
             <ContactSection className="section-wrapper" />
           </Col>
         </Row>
