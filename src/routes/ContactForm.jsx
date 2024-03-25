@@ -1,5 +1,5 @@
 import emailjs from "@emailjs/browser";
-import { Col } from "react-bootstrap";
+import { Form, FloatingLabel, Button } from 'react-bootstrap';
 
 export default function ContactForm() {
   const SERVICE_ID = "service_rv3t9gc";
@@ -17,47 +17,38 @@ export default function ContactForm() {
       });
     e.target.reset()
   };
-  
-  return (
-    <Col md={{ span: 6, offset: 3 }}>
-    <form onSubmit={handleOnSubmit}>
-      <div className="form-floating mb-2">
-        <input 
-          type="text" 
-          name="user_name" 
-          id="user_name" 
-          placeholder="Jane Doe"
-          className="form-control form-control-sm" 
-        />
-        <label htmlFor="user_name" className="">Name</label>
-  
-      </div>
-      <div className="form-floating mb-2">
-          <input 
-            type="email" 
-            name="email" 
-            id="email"
-            className="form-control form-control-sm" 
-            placeholder="janedoe@example.email.com"
-          />
-        <label htmlFor="email">Email</label>
-      </div>
-      <div className="form-floating mb-2">
-          <textarea 
-            name="message"
-            id="message"
-            className="form-control form-control-sm"
-            placeholder="Enter your message here..."
-          />
-        <label htmlFor="message">Message</label>
-   
-      </div>
 
-      <div className="modal-footer button-group">
-        {/* <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}
-        <button type="submit" className="btn btn-primary">Send Message</button>
-      </div>
-    </form>
-    </Col>
-  )
+  return (
+    <Form onSubmit={handleOnSubmit} >
+      <FloatingLabel controlId="floatingName" label="Name" className="mb-3">
+        <Form.Control
+          type="text"
+          placeholder="Name"
+          required
+        />
+      </FloatingLabel>  
+
+      <FloatingLabel controlId="floatingEmail" label="Email" className="mb-3">
+        <Form.Control
+          type="email"
+          placeholder="name@example.com"
+          required
+          />
+      </FloatingLabel>  
+
+      <FloatingLabel controlId="floatingTextarea" label="Message" className="mb-3">
+        <Form.Control
+          as="textarea"
+          placeholder="message"
+          required
+          style={{ height: '100px' }}
+          />
+
+      </FloatingLabel>
+
+      <Button variant="primary" type="submit" aria-label="Email to ayda.sholani@gmail.com">
+        Send email
+      </Button>
+    </Form>
+  );
 }

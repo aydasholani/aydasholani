@@ -1,64 +1,42 @@
-
+import { IoIosCall } from "react-icons/io";
+import { IoIosMail } from "react-icons/io";
+import { Modal, Button, Container, Row, Col} from "react-bootstrap"
+import { Link } from "react-router-dom";
 import ContactForm from "./ContactForm";
-export default function ContactFormModal() {
 
+export default function ContactModal(props) {
+ 
   return (
-    
-    <>
-      <button 
-        type="button" 
-        className="btn btn-primary hollow" 
-        data-bs-toggle="modal" 
-        data-bs-target="#contactModal" 
-        data-bs-whatever="ayda.sholani@gmail.com"
-      >
-        Contact Me!
-      </button>
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+      fullscreen="md-down"
+    >
+      <Modal.Header >
+        <Modal.Title id="contained-modal-title-vcenter"><IoIosMail size={25}/> ayda.sholani@gmail.com</Modal.Title>
+        <Button variant="secondary" onClick={props.onHide}>
+          Close
+        </Button>
+      </Modal.Header>
 
-      <div 
-        className="modal fade" 
-        id="contactModal" 
-        tabIndex="-1" 
-        aria-labelledby="ContactModal" 
-        style={{ display: 'none' }} 
-        aria-hidden="true"
-      >
-        <div className="modal-dialog modal-lg modal-dialog-centered modal-fullscreen-sm-down">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h1 className="modal-title fs-5" id="ContactModal">
-                Contact me!
-              </h1>
-              <button 
-                type="button" 
-                className="btn-close" 
-                data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div className="modal-body">
-              <div className="row">
-                <div className="col">
-                  <p>Ayda Sholani</p>
-                  <a href="tel:+46707479001">+46707479001</a>
-                </div>
-                <div className="col">
-                  <ContactForm />
-                </div>
-              </div>
-    
-            </div>
-            <div className="modal-footer ">
-              <div className="col text-center">
-                github
-                linkedin
-              </div>
-              <span>
-              
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+      <Modal.Body>
+        <Container data-bs-theme="dark">
+          <Row justify-content-center align-content-center>
+            <Col sm={4} className="justify-content-center d-flex align-content-center align-items-center"> 
+              <div className="round-avatar"></div>
+            </Col>
+            <Col className="p-2" >
+              <ContactForm />
+            </Col>
+          </Row>
+        </Container>
+      </Modal.Body>
 
-  );
+      <Modal.Footer>
+        <Link href="tel:+46707479001"><IoIosCall size={18} /> +46707479001</Link>
+      </Modal.Footer>
+    </Modal>    
+  )
 }
