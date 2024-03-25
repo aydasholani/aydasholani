@@ -46,7 +46,7 @@ export default function ContactForm() {
 
       </FloatingLabel>
 
-      <Button variant="primary" type="submit" aria-label="Email to ayda.sholani@gmail.com">
+      <Button variant="outline-primary" type="submit" aria-label="Email to ayda.sholani@gmail.com">
         Send email
       </Button>
     </Form>

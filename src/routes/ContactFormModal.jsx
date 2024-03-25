@@ -33,7 +33,13 @@ export default function ContactModal(props) {
       </Modal.Body>
 
       <Modal.Footer>
-        <Link href="tel:+46707479001"><IoIosCall size={18} /> +46707479001</Link>
+        <Button 
+          href="tel:+46707479001"
+          variant="outline-secondary"
+          size="sm"
+        >
+            <IoIosCall size={18} /> +46707479001
+        </Button>
       </Modal.Footer>
     </Modal>    
   )
