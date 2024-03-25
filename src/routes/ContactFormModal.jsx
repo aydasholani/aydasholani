@@ -1,7 +1,6 @@
 import { IoIosCall } from "react-icons/io";
 import { IoIosMail } from "react-icons/io";
 import { Modal, Button, Container, Row, Col, CloseButton} from "react-bootstrap"
-import { Link } from "react-router-dom";
 import ContactForm from "./ContactForm";
 
 export default function ContactModal(props) {
