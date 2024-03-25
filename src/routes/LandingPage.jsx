@@ -1,7 +1,7 @@
 
 import Skills from './Skills'
 import Projects from './Projects'
-import Hobbies from './Hobbies'
+// import Hobbies from './Hobbies'
 import Testimonials from './Testimonials';
 import ContactSection from './ContactSection';
 import { Container, Row, Col } from 'react-bootstrap';
