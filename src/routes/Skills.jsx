@@ -23,7 +23,7 @@ export default function Skills() {
 
   return (
     <section className='d-flex justify-content-center 100vh'>
-      <Container className="mt-4">
+      <Container className="mt-4 mb-4">
         <h2>Skills</h2>
         <Row className="mt-2 g-4 skills">
           {displaySkills}
