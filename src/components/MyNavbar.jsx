@@ -6,6 +6,7 @@ import { HashLink } from 'react-router-hash-link';
 
 export default function MyNavbar() {
   const [active, setActive] = useState(null);
+  const [selected, setSelected] = useState("false");
 
   const navItems = [
     { id: 'home', text: 'Home', link: '#' },
@@ -15,6 +16,10 @@ export default function MyNavbar() {
     // { id: 'hobbies', text: 'Hobbies', link: '/#hobbies' },
     { id: 'contact', text: 'Contact', link: '#contact' },
   ];
+
+  const handleSelect = (selectedId) => {
+    setActive(selectedId);
+  };
 
   return (
     <Navbar collapseOnSelect fixed="top" expand="lg" data-bs-theme="dark">
@@ -31,10 +36,14 @@ export default function MyNavbar() {
 
         {/* Links to sections */}
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav activeKey={active} onSelect={(selectedKey) => setActive(selectedKey)} className='m-auto'>
+          <Nav activeKey={active} onSelect={handleSelect} className='m-auto'>
             {navItems.map((item) => (
               <Nav.Item key={item.id}>
-                <HashLink to={item.link} eventKey={item.link} data-rr-ui-event-key={item.link} class="nav-link" activeClassName="active">
+                <HashLink 
+                  to={item.link} 
+                  className={`nav-link ${active === item.id ? 'active' : ''}`}
+                  onClick={() => handleSelect(item.id)}
+                >
                   {item.text}
                 </HashLink>
                 {/* <Nav.Link href={item.link} eventKey={item.link}>hello</Nav.Link> */}
