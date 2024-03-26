@@ -25,7 +25,7 @@ export default function NavbarIcons() {
 
       {/* Linkedin */}
       <Nav.Item>
-        <Nav.Link href="https://www.linkedin.com/in/ayda-sholani/" target='_blank'>
+        <Nav.Link href="https://www.linkedin.com/in/ayda-s-a2b663200" target='_blank'>
           <AiOutlineLinkedin />
         </Nav.Link>
       </Nav.Item> 
