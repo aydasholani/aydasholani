@@ -54,12 +54,12 @@ h5 {
 }
 
 svg {
-  fill: $body-color;
+  fill: $gray-600;
 }
 
 a {
   svg:hover {
-    fill: $primary;
+    fill: $body-color;
   }
 }
 
