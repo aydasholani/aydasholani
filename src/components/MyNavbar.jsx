@@ -2,17 +2,18 @@ import { useState } from 'react';
 import { Container, Navbar, Nav }from 'react-bootstrap';
 import logo from '../assets/logo.svg'
 import NavbarIcons from './NavbarIcons';
+import { HashLink } from 'react-router-hash-link';
 
 export default function MyNavbar() {
   const [active, setActive] = useState(null);
 
   const navItems = [
-    { id: 'home', text: 'Home', link: '/#' },
-    { id: 'skills', text: 'Skills', link: '/#skills' },
-    { id: 'projects', text: 'Projects', link: '/#projects' },
-    { id: 'testimonials', text: 'Testimonials', link: '/#testimonials' },
+    { id: 'home', text: 'Home', link: '#' },
+    { id: 'skills', text: 'Skills', link: '#skills' },
+    { id: 'projects', text: 'Projects', link: '#projects' },
+    { id: 'testimonials', text: 'Testimonials', link: '#testimonials' },
     // { id: 'hobbies', text: 'Hobbies', link: '/#hobbies' },
-    { id: 'contact', text: 'Contact', link: '/#contact' },
+    { id: 'contact', text: 'Contact', link: '#contact' },
   ];
 
   return (
@@ -33,9 +34,10 @@ export default function MyNavbar() {
           <Nav activeKey={active} onSelect={(selectedKey) => setActive(selectedKey)} className='m-auto'>
             {navItems.map((item) => (
               <Nav.Item key={item.id}>
-                <Nav.Link href={item.link} eventKey={item.link}>
+                <HashLink to={item.link} eventKey={item.link} data-rr-ui-event-key={item.link} class="nav-link" activeClassName="active">
                   {item.text}
-                </Nav.Link>
+                </HashLink>
+                {/* <Nav.Link href={item.link} eventKey={item.link}>hello</Nav.Link> */}
               </Nav.Item>
             ))}
           </Nav>
