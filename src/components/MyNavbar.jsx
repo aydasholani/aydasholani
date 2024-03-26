@@ -6,7 +6,6 @@ import { HashLink } from 'react-router-hash-link';
 
 export default function MyNavbar() {
   const [active, setActive] = useState(null);
-  const [selected, setSelected] = useState("false");
 
   const navItems = [
     { id: 'home', text: 'Home', link: '#' },
@@ -22,7 +21,13 @@ export default function MyNavbar() {
   };
 
   return (
-    <Navbar collapseOnSelect fixed="top" expand="lg" data-bs-theme="dark">
+    <Navbar 
+      id="navbar"
+      collapseOnSelect 
+      fixed="top" 
+      expand="lg" 
+      data-bs-theme="dark" 
+    >
       <Container>
         {/* Logo */}
         <Navbar.Brand href="#">
