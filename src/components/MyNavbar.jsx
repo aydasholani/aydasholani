@@ -30,7 +30,7 @@ export default function MyNavbar() {
     >
       <Container>
         {/* Logo */}
-        <Navbar.Brand href="#">
+        <Navbar.Brand href="#" title='Logo Link' aria-label='Logo link'>
           <svg>
             <use xlinkHref={`${logo}#logo`}></use>
           </svg>
