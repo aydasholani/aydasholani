@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export default function Weather_API() {
   const WEATHER_API_KEY = "e3b20c293593a4661b29c109d5474bd7";
