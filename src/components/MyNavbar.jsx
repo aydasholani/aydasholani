@@ -13,6 +13,7 @@ export default function MyNavbar() {
     { id: 'projects', text: 'Projects', link: '#projects' },
     { id: 'testimonials', text: 'Testimonials', link: '#testimonials' },
     // { id: 'hobbies', text: 'Hobbies', link: '/#hobbies' },
+    { id: 'weather', text: 'Weather', link: '#weather' },
     { id: 'contact', text: 'Contact', link: '#contact' },
   ];
 
