@@ -8,7 +8,7 @@ export default function Header() {
         <header>
           <div className='d-flex align-items-center justify-content-end vh-100'>
             <Container >
-              <Row noGutters className='text-center justify-content-center'>
+              <Row className='text-center justify-content-center'>
                 <Col xs md={{span: 6, offset: 6}} className='p-4 text-wrapper'>
                   <Col className='p-2'>
                     <h1>Ayda Sholani</h1>
