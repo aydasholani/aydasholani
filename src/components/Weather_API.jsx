@@ -1,4 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { Form, FloatingLabel, Button, Row, Col, Spinner, Placeholder, Card } from 'react-bootstrap';
+import WeatherLoadingCard from './Weather/WeatherLoadingCard';
+import WeatherCard from './Weather/WeatherCard';
 
 export default function Weather_API() {
   const WEATHER_API_KEY = "e3b20c293593a4661b29c109d5474bd7";
@@ -6,13 +9,21 @@ export default function Weather_API() {
 
   const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/weather/?appid=${WEATHER_API_KEY}`;
   const PIXABAY_API_URL = `https://pixabay.com/api/?key=${PIXABAY_API_KEY}`;
-
+  
   const [city, setCity] = useState("");
   const [cityImgUrl, setCityImgUrl] = useState("");
   const [weatherData, setWeatherData] = useState(null);
+  const [dataLoaded, setDataLoaded] = useState(false);
+
+  useEffect(() => {
+    if (weatherData && cityImgUrl) {
+      setDataLoaded(true);
+    }
+  }, [weatherData, cityImgUrl]);
 
   const handleCityChange = (event) => {
     setCity(event.target.value);
+    setWeatherData(null)
   };
 
   const handleSubmit = (event) => {
@@ -29,13 +40,14 @@ export default function Weather_API() {
 
       const weatherData = await weatherResponse.json();
       const imageData = await imageResponse.json();
-
-      console.log(weatherData);
-      console.log(imageData);
-
-      // Update state with weather data and city image URL
+      if (weatherData.cod === '404') {
+        setDataLoaded(false);
+        return;
+      }
       setWeatherData(weatherData);
-      setCityImgUrl(imageData.hits[0].webformatURL); // Assuming you want the first image
+      setCityImgUrl(imageData.hits[0].webformatURL); 
+
+
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -43,37 +55,50 @@ export default function Weather_API() {
 
   const fetchWeatherData = () => {
     const url = `${WEATHER_API_URL}&q=${city}&units=metric&lang=en`;
+    console.log(url)
     return fetch(url);
   };
 
   const fetchImage = () => {
     const url = `${PIXABAY_API_URL}&q=${city}&image_type=photo`;
+    console.log(url)
     return fetch(url);
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Enter city:
-          <input type="text" value={city} onChange={handleCityChange} />
-        </label>
-        <button type="submit">Get Weather</button>
-      </form>
+    <Row className='100vh mt-4 text-center'>
+      <Col>
+        <Form onSubmit={handleSubmit}>
+          <Row xs={6}>
+            <Col xs={7}>
+              <FloatingLabel controlId="floatingEnterCity" label="Enter City" className='mb-2'>
+                <Form.Control 
+                  type="text" 
+                  value={city} 
+                  onChange={handleCityChange} 
+                  placeholder="Enter City"
+                  />
+              </FloatingLabel>
+            </Col>
 
-      {weatherData && (
-        <div>
-          <h2>Weather in {weatherData.name}</h2>
-          <p>Temperature: {Math.ceil(weatherData.main.temp)}°C</p>
-          <p>Description: {weatherData.weather[0].description}</p>
-        </div>
-      )}
+            <Col xs="auto">
+              <Button variant="outline-primary"  type="submit" aria-label="Email to ayda.sholani@gmail.com" className='mt-2' >
+                Submit
+              </Button>  
+            </Col>
+          </Row>
+        </Form>
+      </Col>
 
-      {cityImgUrl && (
-        <div>
-          <img src={cityImgUrl} alt="City" />
-        </div>
-      )}
-    </div>
+      <Col xs={12}>
+        <Row className="text-center">
+          {dataLoaded && weatherData && cityImgUrl ? 
+            <WeatherCard weatherData={weatherData} cityImgUrl={cityImgUrl} />
+              : 
+            <WeatherLoadingCard /> 
+          }
+        </Row>
+      </Col>
+    </Row>
   );
 }

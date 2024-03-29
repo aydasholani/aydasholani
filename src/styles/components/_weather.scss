@@ -1,0 +1,25 @@
+
+.weather-wrapper.card {
+  padding: 0;
+  .card-img-top {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.weather-form {
+  background-color: blue;
+  width: 100%;
+}
+
+.display-weather {
+  background-color: blue;
+  width: 100%;
+}
