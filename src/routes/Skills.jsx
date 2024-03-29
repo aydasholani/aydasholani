@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col} from "react-bootstrap";
-import skillsData from '../data/skillsData.json'
+import skillsData from '../data/skillsData'
 
 export default function Skills() {
   const [skills, setSkills] = useState([]);
@@ -9,9 +9,9 @@ export default function Skills() {
     setSkills(skillsData);
   }, []);
 
-  const displaySkills = skills.map((skill, index) => {
+  const displaySkills = skills.map((skill) => {
     return (  
-      <Col key={skill.index} bg="dark" className="skill" xs={2}>
+      <Col key={skill.key} bg="dark" className="skill" xs={2}>
         <img 
           variant="top" 
           src={`${skill.img}`} 

@@ -63,15 +63,9 @@ a {
   }
 }
 
-.sticky-icons {
-  width: 25%;
-  height: 25vh;
-  float: right;
-  min-height: 200px;
-  overflow: auto;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 5%;
+main {
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 // Ändrar färg på section
