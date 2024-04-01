@@ -2,7 +2,7 @@ import { Card } from 'react-bootstrap';
 
 export default function WeatherCard(props) {
   if (!props.data) {
-    return null; // Render nothing if data is null
+    return null; 
   }
   
   return (
