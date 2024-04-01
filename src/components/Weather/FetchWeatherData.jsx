@@ -33,6 +33,7 @@ export default function FetchWeatherData(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     getCurrentPosition()
+    fetchData();
   }
   
   const fetchData = async () => {
@@ -61,9 +62,6 @@ export default function FetchWeatherData(props) {
       console.error('Error fetching data:', error);
     }
   };
-  // useEffect(() => {
-  //   fetchData();
-  // });
 
   return (
     <div>
