@@ -31,7 +31,7 @@ export default function FetchWeatherData(props) {
 
   useEffect(() => {
     fetchData();
-  }, [lon, lat]);
+  }, [fetchData, lon, lat]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
