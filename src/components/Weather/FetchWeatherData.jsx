@@ -63,7 +63,7 @@ export default function FetchWeatherData(props) {
   };
   useEffect(() => {
     fetchData();
-  }, [fetchData, lon, lat]);
+  }, [fetchData]);
 
   return (
     <div>
