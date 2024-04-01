@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Form, FloatingLabel, Button, Row, Col } from 'react-bootstrap';
+import { Form, Button, Row, Col } from 'react-bootstrap';
 
 
 export default function FetchWeatherData(props) {
