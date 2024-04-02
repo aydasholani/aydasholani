@@ -3,12 +3,10 @@ import { Button } from 'react-bootstrap';
 
 export default function FetchWeatherData({ setData }) {
   const [isFetching, setIsFetching] = useState(false);
-  const [message, setMessage] = useState('')
   const [lon, setLon] = useState(18.0686);
   const [lat, setLat] = useState(59.3293);
 
   const WEATHER_API_KEY = "4c3ba0cf677b6f8dd847951bdf500141";
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,13 +23,15 @@ export default function FetchWeatherData({ setData }) {
     };
 
     fetchData();
-  }, [lat, lon]);
+  }, []);
 
   const handleClick = async () => {
     setIsFetching(true);
+
     try {
       const position = await getCurrentPosition();
-      const weatherData = await fetchWeatherData(lat, lon);
+      const { latitude, longitude } = position.coords;
+      const weatherData = await fetchWeatherData(latitude, longitude);
 
       setData(weatherData);
     } catch (error) {
@@ -45,18 +45,9 @@ export default function FetchWeatherData({ setData }) {
     return new Promise((resolve, reject) => {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
-          position => {
-            setLat(position.coords.latitude);
-            setLon(position.coords.longitude);
-            console.log('Position:', position);
-            resolve(position);
-            setMessage('')
-          },
-          error => {
-            setMessage('You must accept geolocation to fetch your weather data');
-            reject(error)
-          }
-          );
+          position => resolve(position),
+          error => reject(error)
+        );
       } else {
         reject(new Error('Geolocation is not supported by this browser.'));
       }
@@ -65,6 +56,8 @@ export default function FetchWeatherData({ setData }) {
 
   const fetchWeatherData = async (latitude, longitude) => {
     const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/weather/?appid=${WEATHER_API_KEY}&limit=5&units=metric&lon=${longitude}&lat=${latitude}`;
+
+    console.log(WEATHER_API_URL);
 
     try {
       const response = await fetch(WEATHER_API_URL);
@@ -92,7 +85,6 @@ export default function FetchWeatherData({ setData }) {
       <Button variant="outline-primary" onClick={handleClick} disabled={isFetching}>
         {isFetching ? 'Fetching...' : 'Get weather in your location'}
       </Button>
-      {message && <p className="text-danger">{message}</p>}
     </div>
   );
 }
