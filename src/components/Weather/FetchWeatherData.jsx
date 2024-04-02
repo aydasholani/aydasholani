@@ -1,51 +1,98 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 
-export default function FetchWeatherData(props) {
+export default function FetchWeatherData({ setData }) {
+  const [isFetching, setIsFetching] = useState(false);
+  const [message, setMessage] = useState('')
   const [lon, setLon] = useState(18.0686);
   const [lat, setLat] = useState(59.3293);
 
   const WEATHER_API_KEY = "4c3ba0cf677b6f8dd847951bdf500141";
 
-  const fetchData = async () => {
-    const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/weather/?appid=${WEATHER_API_KEY}&limit=5&units=metric&lon=${lon}&lat=${lat}`;
 
-    console.log(WEATHER_API_URL);
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsFetching(true);
 
-    try {
-      const weatherResponse = await fetch(WEATHER_API_URL);
-      const weatherData = await weatherResponse.json();
-
-      if (weatherData.cod === '404') {
-        props.setDataLoaded(false);
-        return;
+      try {
+        const weatherData = await fetchWeatherData(lat, lon);
+        setData(weatherData);
+      } catch (error) {
+        console.error('Error fetching default weather data:', error);
+      } finally {
+        setIsFetching(false);
       }
+    };
 
-      props.setData({
-        name: weatherData.name,
-        temp: Math.ceil(weatherData.main.temp),
-        feelsLike: Math.ceil(weatherData.main.feels_like),
-        description: weatherData.weather[0].description,
-        main: weatherData.weather[0].main,
-        icon: `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`
-      });
+    fetchData();
+  }, [lat, lon]);
 
-      console.log(weatherData);
+  const handleClick = async () => {
+    setIsFetching(true);
+    try {
+      const position = await getCurrentPosition();
+      const weatherData = await fetchWeatherData(lat, lon);
 
+      setData(weatherData);
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.error('Error fetching weather data:', error);
+    } finally {
+      setIsFetching(false);
     }
   };
 
-  const handleClick = async () => {
-    await fetchData();
+  const getCurrentPosition = () => {
+    return new Promise((resolve, reject) => {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          position => {
+            setLat(position.coords.latitude);
+            setLon(position.coords.longitude);
+            console.log('Position:', position);
+            resolve(position);
+            setMessage('')
+          },
+          error => {
+            setMessage('You must accept geolocation to fetch your weather data');
+            reject(error)
+          }
+          );
+      } else {
+        reject(new Error('Geolocation is not supported by this browser.'));
+      }
+    });
+  };
+
+  const fetchWeatherData = async (latitude, longitude) => {
+    const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/weather/?appid=${WEATHER_API_KEY}&limit=5&units=metric&lon=${longitude}&lat=${latitude}`;
+
+    try {
+      const response = await fetch(WEATHER_API_URL);
+      const data = await response.json();
+
+      if (data.cod === '404') {
+        throw new Error('Weather data not found.');
+      }
+
+      return {
+        name: data.name,
+        temp: Math.ceil(data.main.temp),
+        feelsLike: Math.ceil(data.main.feels_like),
+        description: data.weather[0].description,
+        main: data.weather[0].main,
+        icon: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+      };
+    } catch (error) {
+      throw new Error('Error fetching weather data:', error);
+    }
   };
 
   return (
     <div>
-      <Button variant="outline-primary" onClick={handleClick} className='mt-2'>
-        Get weather in Stockholm
+      <Button variant="outline-primary" onClick={handleClick} disabled={isFetching}>
+        {isFetching ? 'Fetching...' : 'Get weather in your location'}
       </Button>
+      {message && <p className="text-danger">{message}</p>}
     </div>
   );
 }
