@@ -1,41 +1,40 @@
 import { useState, useEffect } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Spinner } from 'react-bootstrap';
+const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API_KEY || "4c3ba0cf677b6f8dd847951bdf500141";
 
 export default function FetchWeatherData({ setData }) {
   const [isFetching, setIsFetching] = useState(false);
-  const [lon, setLon] = useState(18.0686);
-  const [lat, setLat] = useState(59.3293);
-
-  const WEATHER_API_KEY = "4c3ba0cf677b6f8dd847951bdf500141";
+  const [message, setMessage] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
       setIsFetching(true);
-
       try {
-        const weatherData = await fetchWeatherData(lat, lon);
+        const position = await getCurrentPosition();
+        const weatherData = await fetchWeatherData(position.coords.latitude, position.coords.longitude);
         setData(weatherData);
+        setMessage('');
       } catch (error) {
-        console.error('Error fetching default weather data:', error);
+        console.error('Error fetching weather data:', error);
+        setMessage('Failed to fetch weather data. Please try again later.');
       } finally {
         setIsFetching(false);
       }
     };
-
+  
     fetchData();
-  }, []);
+  }, [setData]);
 
   const handleClick = async () => {
     setIsFetching(true);
-
     try {
       const position = await getCurrentPosition();
-      const { latitude, longitude } = position.coords;
-      const weatherData = await fetchWeatherData(latitude, longitude);
-
+      const weatherData = await fetchWeatherData(position.coords.latitude, position.coords.longitude);
       setData(weatherData);
+      setMessage('');
     } catch (error) {
       console.error('Error fetching weather data:', error);
+      setMessage('Failed to fetch weather data. Please try again later.');
     } finally {
       setIsFetching(false);
     }
@@ -45,10 +44,17 @@ export default function FetchWeatherData({ setData }) {
     return new Promise((resolve, reject) => {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
-          position => resolve(position),
-          error => reject(error)
+          position => {
+            console.log('Position:', position);
+            resolve(position);
+          },
+          error => {
+            setMessage('You must accept geolocation to fetch your weather data');
+            reject(error);
+          }
         );
       } else {
+        setMessage('Geolocation is not supported by this browser.');
         reject(new Error('Geolocation is not supported by this browser.'));
       }
     });
@@ -56,8 +62,6 @@ export default function FetchWeatherData({ setData }) {
 
   const fetchWeatherData = async (latitude, longitude) => {
     const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/weather/?appid=${WEATHER_API_KEY}&limit=5&units=metric&lon=${longitude}&lat=${latitude}`;
-
-    console.log(WEATHER_API_URL);
 
     try {
       const response = await fetch(WEATHER_API_URL);
@@ -83,8 +87,9 @@ export default function FetchWeatherData({ setData }) {
   return (
     <div>
       <Button variant="outline-primary" onClick={handleClick} disabled={isFetching}>
-        {isFetching ? 'Fetching...' : 'Get weather in your location'}
+        {isFetching ? <Spinner animation="border" size="sm" /> : 'Get weather in your location'}
       </Button>
+      {message && <p className="text-danger">{message}</p>}
     </div>
   );
 }
