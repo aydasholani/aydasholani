@@ -1,25 +1,27 @@
-$primary:#EE5E91;
-$secondary:#925165;
+
 $dark-grey: #131517;
 $neon-purple: #BAA8FF;
-$box-shadow: #C05FA1;
+$dark-neon-purple: darken($neon-purple, 10%);
+$darker-neon-purple: darken($dark-neon-purple, 50%);
+$subtle-dark-background: rgba(23, 23, 23, 0.158);
+
+
 $body-bg: #010203;
 $body-color:  #FFFAF0;
 
-$dark-neon-purple: darken($neon-purple, 10%);
-$darker-neon-purple: darken($dark-neon-purple, 50%);
-
-$subtle-dark-background: rgba(23, 23, 23, 0.158);
+$primary: $dark-neon-purple;
+$secondary:#EE5E91;
+$darken-secondary-color: darken($secondary, 20%);
 
 // Navbar and links
 $link-decoration: none;
 $body-text-align: center;
 $link-color: #FFFAF0;
 
-$link-hover-color: $primary;
+$link-hover-color: $secondary;
 $navbar-dark-color: #FFFAF0;
-$navbar-dark-hover-color: $primary;
-$navbar-dark-active-color: $secondary;
+$navbar-dark-hover-color: $secondary;
+$navbar-dark-active-color: $darken-secondary-color;
 $footer-background-color: #212529;
 
 $section-bg :  #121212;
