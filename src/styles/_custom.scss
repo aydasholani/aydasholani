@@ -1,13 +1,16 @@
-$primary:#FF6DAC;
 $primary:#EE5E91;
 $secondary:#925165;
 $dark-grey: #131517;
 $neon-purple: #BAA8FF;
-
+$box-shadow: #C05FA1;
 $body-bg: #010203;
 $body-color:  #FFFAF0;
 
-// $primary-bg-subtle-dark: #131517;
+$dark-neon-purple: darken($neon-purple, 10%);
+$darker-neon-purple: darken($dark-neon-purple, 50%);
+
+$subtle-dark-background: rgba(23, 23, 23, 0.158);
+
 // Navbar and links
 $link-decoration: none;
 $body-text-align: center;
@@ -17,10 +20,10 @@ $link-hover-color: $primary;
 $navbar-dark-color: #FFFAF0;
 $navbar-dark-hover-color: $primary;
 $navbar-dark-active-color: $secondary;
-$subtle-dark-background: rgba(23, 23, 23, 0.158);
 $footer-background-color: #212529;
 
-$section-bg : #16161d;
+$section-bg :  #121212;
+
 // Forms
 $input-bg: #131517;
 
