@@ -1,7 +1,8 @@
 import { IoIosCall } from "react-icons/io";
 import { IoIosMail } from "react-icons/io";
-import { Modal, Button, Container, Row, Col, CloseButton} from "react-bootstrap"
+import { Modal, Button, Container, Row, Col, CloseButton, Image} from "react-bootstrap"
 import ContactForm from "./ContactForm";
+import avatar from "../img/round.png";
 
 export default function ContactModal(props) {
  
@@ -22,7 +23,7 @@ export default function ContactModal(props) {
         <Container data-bs-theme="dark">
           <Row justify-content-center align-content-center>
             <Col sm={4} className="justify-content-center d-flex align-content-center align-items-center"> 
-              <div className="round-avatar"></div>
+              <Image src={avatar} roundedCircle className="round-avatar" alt="avatar" />
             </Col>
             <Col className="p-2" >
               <ContactForm />
