@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Skills from './Skills'
 import Projects from './Projects'
 import Testimonials from './Testimonials';
-import CurrentWeather from './CurrentWeather';
+
 
 export default function LandingPage() {
   return (
@@ -19,9 +19,6 @@ export default function LandingPage() {
 
         <Col xs={12} id="testimonials" className='p-5'>
           <Testimonials />
-        </Col>
-        <Col xs={12} id="weather" className='p-5'>
-          <CurrentWeather />
         </Col>
       </Row>
     </Container>
