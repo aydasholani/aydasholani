@@ -2,7 +2,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 import Skills from './Skills'
 import Projects from './Projects'
-import Testimonials from './Testimonials';
+// import Testimonials from './Testimonials';
 
 
 export default function LandingPage() {
@@ -17,9 +17,9 @@ export default function LandingPage() {
           <Projects />
         </Col>
 
-        <Col xs={12} id="testimonials" className='p-5'>
+{/*         <Col xs={12} id="testimonials" className='p-5'>
           <Testimonials />
-        </Col>
+        </Col> */}
       </Row>
     </Container>
 
