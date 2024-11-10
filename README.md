@@ -21,10 +21,6 @@
 - 🛠️ Open-source projects related to data science and machine learning
 - 🎮 Projects involving gamification or interactive apps
 
-### 📫 How to Reach Me
-- 💼 [LinkedIn]([https://www.linkedin.com/in/aydasholani](https://www.linkedin.com/in/ayda-s-a2b663200/))
-- 📧 Email me at [aydasholani@gmail.com](mailto:ayda.sholani@gmail.com)
-
 ### ⚡ Fun Fact
 - 🧠 I work best under pressure and enjoy breaking down complex problems into smaller, manageable tasks.
 - 🎲 Recently, I built a program for object detection and textrecognition(Swedish) for the game **Codenames**.
