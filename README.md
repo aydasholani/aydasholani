@@ -1,25 +1,36 @@
-# Ayda Sholani Portfolio
-Welcome to Ayda's portfolio! 
-I'm a passionate frontend developer and AI enthusiast based in Stockholm, Sweden with a background in JavaScript, HTML, CSS, React.js, Node.js, Python, and SQLite.
+# 👋 Hi, I'm Ayda Sholani!
 
-I've built this portfolio using the framework Reactjs, gh-pages scss and bootstrap.
+### 👩‍💻 About Me
+- 🎓 Junior frontend developer, currently studying AI development.
+- 🧩 Passionate about problem-solving, especially when it involves writing clean and efficient code.
+- ⚡ Always eager to learn new technologies and enhance my skills through hands-on projects.
+- 😄 Pronouns: she/her
 
-You can find my live page at [Ayda Sholani | Portfolio](https://aydasholani.github.io/portfolio/ "Link to my portfolio on GitHub pages").
+### 👀 My Interests
+- 📈 AI and Machine Learning 
+- 🌐 Web Development (React.js, Node.js, Flask)
+- 🖥️ Projects that combine frontend development with AI solutions
 
-I've also used [Weather Api](https://openweathermap.org/api "Link to API documentation") to fetch the current weather.
+### 🌱 Currently Learning
+- 🔍 Diving deeper into Flask and real-time communication using Flask-SocketIO
+- 🤖 Enhancing my skills in TensorFlow and image recognition
+- 🐍 Exploring Python and SQLAlchemy for database interactions
 
+### 💞️ Looking to Collaborate On
+- 🌐 Exciting AI or web development projects
+- 🛠️ Open-source projects related to data science and machine learning
+- 🎮 Projects involving gamification or interactive apps
 
+### 📫 How to Reach Me
+- 💼 [LinkedIn]([https://www.linkedin.com/in/aydasholani](https://www.linkedin.com/in/ayda-s-a2b663200/))
+- 📧 Email me at [aydasholani@example.com](mailto:ayda.sholani@gmail.com)
 
-## Clone repository
-```bash
-$ git clone https://github.com/aydasholani/portfolio.git
-```
+### ⚡ Fun Fact
+- 🧠 I work best under pressure and enjoy breaking down complex problems into smaller, manageable tasks.
+- 🎲 Recently, I built a program for object detection and textrecognition(Swedish) for the game **Codenames**.
 
-## Install 
-```bash
-$ npm i
-```
-## Start application
-```bash
-$ npm start
-```
+---
+
+<!---
+aydasholani/aydasholani is a ✨ special ✨ profile showcasing my passion for technology and how I can contribute to exciting projects!
+--->
