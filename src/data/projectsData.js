@@ -47,7 +47,7 @@ module.exports = [
   {
     key: 6,
     name: "Houseprices prediction",
-    techs: "Python",
+    techs: "Python, pandas, numpy, plotly, sklearn, tensorflow",
     description: "This project involves a simple prediction of house prices.",
     link: "https://github.com/aydasholani/Houseprices-prediction",
     img: "houseprice.jpg",
@@ -55,10 +55,18 @@ module.exports = [
   {
     key: 7,
     name: "Pokemon Battle Prediction",
-    techs: "Python",
+    techs: "Python, pandas, numpy, plotly, sklearn, XGBoost, RandomForrest",
     description:
       "This project involves a simple prediction of the winner of a Pokemon battle.",
     link: "https://github.com/aydasholani/pokemon-battle",
     img: "pokemon.png",
+  },
+  {
+    key: 8,
+    name: "Object Detection & Text Recognition",
+    techs: "Python, Ultralytics YOLO, EasyOCR",
+    description: "This project involves card detection and text recognition",
+    link: "https://github.com/aydasholani/Codenames-AI",
+    img: "cn-grid.png",
   },
 ];
