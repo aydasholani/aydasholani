@@ -12,12 +12,12 @@ export default function Header() {
                 <Col xs md={{span: 6, offset: 6}} className='p-4 text-wrapper'>
                   <Col className='p-2'>
                     <h1>Ayda Sholani</h1>
-                    <h3>- Frontend Developer/AI Developer Student</h3>
+                    <h3>- AI Developer & Frontend Developer</h3>
                   </Col>
                   <Col className='p-3'>
-                    Hello there! 
-                    I'm Ayda Sholani, 
-                    a passionate frontend developer from Stockholm, Sweden, currently expanding my skills into AI development.
+                    Hello!
+                      I'm Ayda Sholani, a passionate frontend and AI developer from Stockholm, Sweden.
+                      I learn quickly and think clearly—because the hardest challenges are usually the most rewarding to solve.
                   </Col> 
                 </Col>
               </Row>
