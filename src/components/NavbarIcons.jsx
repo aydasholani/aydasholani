@@ -1,7 +1,7 @@
 import { AiOutlineGithub } from "react-icons/ai";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import cv from '../assets/cv.svg'
-import MyCV from "../Ayda_Sholani_CV.pdf";
+import MyCV from "../files/Ayda_Sholani_CV.pdf";
 import { Nav } from 'react-bootstrap';
 
 export default function NavbarIcons() {
