@@ -2,6 +2,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 import Skills from './Skills'
 import Projects from './Projects'
+import Repositories from './Repositories'
 // import Testimonials from './Testimonials';
 
 
@@ -17,9 +18,10 @@ export default function LandingPage() {
           <Projects />
         </Col>
 
-{/*         <Col xs={12} id="testimonials" className='p-5'>
-          <Testimonials />
-        </Col> */}
+        <Col xs={12} id="contact" className='p-5'>
+          <Repositories />
+        </Col>
+
       </Row>
     </Container>
 
