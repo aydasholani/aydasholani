@@ -15,7 +15,7 @@ export default function Header() {
                     <h3>- AI Developer & Frontend Developer</h3>
                   </Col>
                   <Col className='p-3'>
-                    Hello!
+                      Hello!
                       I'm Ayda Sholani, a passionate frontend and AI developer from Stockholm, Sweden.
                       I learn quickly and think clearly—because the hardest challenges are usually the most rewarding to solve.
                   </Col> 
