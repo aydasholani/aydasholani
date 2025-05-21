@@ -19,7 +19,6 @@ export default function Header() {
                       I'm Ayda Sholani, a passionate frontend and AI developer from Stockholm, Sweden.
                       I learn quickly and think clearly—because the hardest challenges are usually the most rewarding to solve.
                   </Col> 
-                  test
                 </Col>
               </Row>
             </Container>
